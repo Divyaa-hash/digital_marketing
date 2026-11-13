@@ -1,0 +1,147 @@
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Bot, Workflow, Zap, Database, GitBranch, Settings, ArrowRight, CheckCircle } from 'lucide-react';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
+import PageHero from '../components/common/PageHero';
+import SectionHeading from '../components/common/SectionHeading';
+import EnquiryForm from '../components/forms/EnquiryForm';
+
+const AIAutomation = () => {
+  const services = [
+    { icon: Bot, title: 'AI Chatbots', desc: 'Intelligent chatbots that handle customer queries 24/7, improving response times and customer satisfaction.' },
+    { icon: Workflow, title: 'n8n Automation', desc: 'Workflow automation using n8n to connect your apps and automate repetitive tasks efficiently.' },
+    { icon: Zap, title: 'Marketing Automation', desc: 'Automate your marketing campaigns, email sequences, and lead nurturing processes.' },
+    { icon: Database, title: 'CRM Automation', desc: 'Streamline your CRM operations with automated data entry, updates and follow-ups.' },
+    { icon: GitBranch, title: 'Lead Management Automation', desc: 'Automate lead scoring, routing and follow-up to ensure no opportunity is missed.' },
+    { icon: Settings, title: 'API Integration', desc: 'Connect your systems and applications through seamless API integrations.' },
+    { icon: Workflow, title: 'Business Workflow Automation', desc: 'Optimize business processes by automating manual workflows and reducing errors.' }
+  ];
+
+  const benefits = [
+    'Reduced manual work and human error',
+    'Faster response times to customer queries',
+    'Improved operational efficiency',
+    'Cost savings through automation',
+    'Better data accuracy and consistency',
+    'Scalable solutions that grow with your business'
+  ];
+
+  const process = [
+    { step: 1, title: 'Process Analysis', desc: 'We analyze your current workflows to identify automation opportunities.' },
+    { step: 2, title: 'Solution Design', desc: 'We design customized automation solutions tailored to your needs.' },
+    { step: 3, title: 'Implementation', desc: 'We implement the automation workflows and integrate with your systems.' },
+    { step: 4, title: 'Testing & Optimization', desc: 'We test thoroughly and optimize for maximum efficiency.' }
+  ];
+
+  return (
+    <div className="min-h-screen">
+      <Header />
+      <PageHero
+        title="Let Technology Handle the Repetitive. Let Your Team Focus on Growth."
+        subtitle="AI & Automation"
+        description="Streamline your operations with intelligent automation solutions that save time, reduce errors and boost productivity."
+      />
+
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="Our Solutions"
+            title="AI & Automation Services"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.title}
+                className="bg-lightBg rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <service.icon className="text-electricBlue mb-4" size={32} />
+                <h3 className="text-lg font-heading font-bold text-midnight mb-2">{service.title}</h3>
+                <p className="text-gray-600 text-sm">{service.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-lightBg">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="Why Automate"
+            title="Benefits for Your Business"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit}
+                className="flex items-start"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <CheckCircle className="text-teal mr-3 flex-shrink-0 mt-1" size={20} />
+                <span className="text-gray-700">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="Implementation Process"
+            title="How We Automate Your Workflows"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {process.map((item) => (
+              <motion.div
+                key={item.step}
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: item.step * 0.1 }}
+              >
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-electricBlue to-deepPurple flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                  {item.step}
+                </div>
+                <h3 className="text-lg font-heading font-bold text-midnight mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-lightBg">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <SectionHeading
+                subtitle="Get Started"
+                title="Ready to Automate Your Business?"
+                description="Contact us to discuss how AI and automation can transform your operations."
+              />
+              <div className="mt-8">
+                <Link to="/contact" className="inline-flex items-center text-electricBlue font-medium hover:gap-2 transition-all">
+                  Contact Us <ArrowRight size={16} className="ml-1" />
+                </Link>
+              </div>
+            </div>
+            <EnquiryForm title="Enquire About AI & Automation" />
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default AIAutomation;
