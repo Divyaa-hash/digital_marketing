@@ -24,6 +24,14 @@ export const services = [
     color: 'from-teal to-electricBlue'
   },
   {
+    id: 'sap-solutions',
+    title: 'SAP Solutions',
+    description: 'SAP FICO, SAP ABAP, SAP SuccessFactors, SAP S/4HANA Implementation, SAP Consulting and SAP Training.',
+    icon: 'Database',
+    route: '/services/sap-solutions',
+    color: 'from-electricBlue to-teal'
+  },
+  {
     id: 'business-growth',
     title: 'Business Growth',
     description: 'Digital Branding, Marketing Strategy, Conversion Optimization, Analytics & Reporting, Customer Acquisition Strategy and Marketing Consulting.',

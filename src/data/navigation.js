@@ -8,6 +8,7 @@ export const navigation = [
       { name: 'Digital Marketing', route: '/services/digital-marketing' },
       { name: 'AI & Automation', route: '/services/ai-automation' },
       { name: 'Web & Technology', route: '/services/web-technology' },
+      { name: 'SAP Solutions', route: '/services/sap-solutions' },
       { name: 'Business Growth', route: '/services/business-growth' }
     ]
   },

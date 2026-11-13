@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import DigitalMarketing from './pages/DigitalMarketing';
 import AIAutomation from './pages/AIAutomation';
 import WebTechnology from './pages/WebTechnology';
+import SAPSolutions from './pages/SAPSolutions';
 import BusinessGrowth from './pages/BusinessGrowth';
 import Industries from './pages/Industries';
 import CaseStudies from './pages/CaseStudies';
@@ -28,6 +29,7 @@ function App() {
           <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
           <Route path="/services/ai-automation" element={<AIAutomation />} />
           <Route path="/services/web-technology" element={<WebTechnology />} />
+          <Route path="/services/sap-solutions" element={<SAPSolutions />} />
           <Route path="/services/business-growth" element={<BusinessGrowth />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/case-studies" element={<CaseStudies />} />
