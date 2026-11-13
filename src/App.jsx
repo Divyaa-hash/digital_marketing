@@ -13,6 +13,7 @@ import CaseStudies from './pages/CaseStudies';
 import Academy from './pages/Academy';
 import CourseDetail from './pages/CourseDetail';
 import Resources from './pages/Resources';
+import BlogDetail from './pages/BlogDetail';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
@@ -36,6 +37,7 @@ function App() {
           <Route path="/academy" element={<Academy />} />
           <Route path="/academy/:id" element={<CourseDetail />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/resources/:id" element={<BlogDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsConditions />} />
