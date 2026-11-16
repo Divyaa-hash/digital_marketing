@@ -53,7 +53,7 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <Eye className="text-electricBlue mb-4" size={40} />
+              <Eye className="text-accent mb-4" size={40} />
               <h3 className="text-2xl font-heading font-bold text-midnight mb-4">Vision</h3>
               <p className="text-gray-600 leading-relaxed">
                 To become a trusted technology and digital growth partner for businesses and learners, enabling them to achieve their full potential in the digital world.
@@ -65,7 +65,7 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <Target className="text-deepPurple mb-4" size={40} />
+              <Target className="text-secondary mb-4" size={40} />
               <h3 className="text-2xl font-heading font-bold text-midnight mb-4">Mission</h3>
               <p className="text-gray-600 leading-relaxed">
                 To help businesses grow digitally and empower individuals with practical, future-ready skills that open new career opportunities.
@@ -96,7 +96,7 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <value.icon className="text-electricBlue mb-4" size={32} />
+                <value.icon className="text-accent mb-4" size={32} />
                 <h3 className="text-lg font-heading font-bold text-midnight mb-2">{value.title}</h3>
                 <p className="text-gray-600 text-sm">{value.desc}</p>
               </motion.div>
@@ -123,7 +123,7 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-electricBlue to-deepPurple flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                   {index + 1}
                 </div>
                 <h3 className="text-white font-semibold">{step}</h3>
@@ -164,7 +164,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-midnight via-deepPurple to-electricBlue">
+      <section className="py-20 bg-gradient-to-br from-midnight via-secondary to-accent">
         <div className="container-custom text-center">
           <motion.h2
             className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6"

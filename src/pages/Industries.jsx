@@ -33,7 +33,7 @@ const Industries = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Icon className="text-electricBlue mb-4 group-hover:scale-110 transition-transform" size={40} />
+                  <Icon className="text-accent mb-4 group-hover:scale-110 transition-transform" size={40} />
                   <h3 className="text-xl font-heading font-bold text-midnight mb-3">{industry.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{industry.description}</p>
                 </motion.div>
@@ -43,7 +43,7 @@ const Industries = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-midnight via-deepPurple to-electricBlue">
+      <section className="py-20 bg-gradient-to-br from-midnight via-deepPurple to-accent">
         <div className="container-custom text-center">
           <motion.h2
             className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6"

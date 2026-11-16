@@ -234,7 +234,7 @@ const BlogDetail = () => {
           <div className="container-custom text-center">
             <h1 className="text-4xl font-heading font-bold text-midnight mb-4">Blog Post Not Found</h1>
             <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
-            <Link to="/resources" className="text-electricBlue font-medium inline-flex items-center">
+            <Link to="/resources" className="text-accent font-medium inline-flex items-center">
               <ArrowLeft size={16} className="mr-2" />
               Back to Resources
             </Link>
@@ -278,11 +278,11 @@ const BlogDetail = () => {
 
             <div className="mt-12 pt-8 border-t border-gray-200">
               <div className="flex items-center justify-between">
-                <Link to="/resources" className="inline-flex items-center text-electricBlue font-medium hover:gap-2 transition-all">
+                <Link to="/resources" className="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
                   <ArrowLeft size={16} className="mr-2" />
                   Back to Resources
                 </Link>
-                <button className="inline-flex items-center text-gray-600 hover:text-electricBlue transition-colors">
+                <button className="inline-flex items-center text-gray-600 hover:text-accent transition-colors">
                   <Share2 size={16} className="mr-2" />
                   Share
                 </button>

@@ -70,7 +70,7 @@ const Academy = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-electricBlue to-deepPurple flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-deepPurple flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                   {index + 1}
                 </div>
                 <h3 className="text-white font-semibold">{step}</h3>
@@ -105,16 +105,16 @@ const Academy = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
-                    <span className="text-white text-sm font-medium bg-electricBlue/90 px-3 py-1 rounded-full">
+                    <span className="text-white text-sm font-medium bg-accent/90 px-3 py-1 rounded-full">
                       {course.modules.length} Modules
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-heading font-bold text-midnight mb-2 group-hover:text-electricBlue transition-colors">{course.title}</h3>
-                  <p className="text-electricBlue font-medium text-sm mb-3">{course.tagline}</p>
+                  <h3 className="text-xl font-heading font-bold text-midnight mb-2 group-hover:text-accent transition-colors">{course.title}</h3>
+                  <p className="text-accent font-medium text-sm mb-3">{course.tagline}</p>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">{course.description}</p>
-                  <Link to={course.route} className="text-electricBlue font-medium inline-flex items-center group-hover:gap-2 transition-all">
+                  <Link to={course.route} className="text-accent font-medium inline-flex items-center group-hover:gap-2 transition-all">
                     View Course <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -140,7 +140,7 @@ const Academy = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <feature.icon className="text-electricBlue mb-4" size={32} />
+                <feature.icon className="text-accent mb-4" size={32} />
                 <h3 className="text-lg font-heading font-bold text-midnight mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.desc}</p>
               </motion.div>
@@ -149,7 +149,7 @@ const Academy = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-midnight via-deepPurple to-electricBlue">
+      <section className="py-20 bg-gradient-to-br from-midnight via-deepPurple to-accent">
         <div className="container-custom text-center">
           <motion.h2
             className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6"

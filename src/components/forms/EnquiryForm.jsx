@@ -61,7 +61,7 @@ const EnquiryForm = ({ title = 'Send Us a Message', className = '' }) => {
             type="text"
             id="fullName"
             {...register('fullName', { required: 'Full name is required' })}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-electricBlue focus:border-transparent transition-all"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
             placeholder="John Doe"
           />
           {errors.fullName && (
@@ -83,7 +83,7 @@ const EnquiryForm = ({ title = 'Send Us a Message', className = '' }) => {
                 message: 'Invalid email address'
               }
             })}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-electricBlue focus:border-transparent transition-all"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
             placeholder="john@example.com"
           />
           {errors.email && (
@@ -105,7 +105,7 @@ const EnquiryForm = ({ title = 'Send Us a Message', className = '' }) => {
                 message: 'Invalid phone number'
               }
             })}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-electricBlue focus:border-transparent transition-all"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
             placeholder="9876543210"
           />
           {errors.phone && (
@@ -121,7 +121,7 @@ const EnquiryForm = ({ title = 'Send Us a Message', className = '' }) => {
             type="text"
             id="company"
             {...register('company')}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-electricBlue focus:border-transparent transition-all"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
             placeholder="Your Company Name"
           />
         </div>
@@ -133,7 +133,7 @@ const EnquiryForm = ({ title = 'Send Us a Message', className = '' }) => {
           <select
             id="enquiryType"
             {...register('enquiryType', { required: 'Please select an enquiry type' })}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-electricBlue focus:border-transparent transition-all"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
           >
             <option value="">Select an option</option>
             <option value="digital-marketing">Digital Marketing</option>
@@ -156,7 +156,7 @@ const EnquiryForm = ({ title = 'Send Us a Message', className = '' }) => {
             id="message"
             rows={4}
             {...register('message', { required: 'Message is required' })}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-electricBlue focus:border-transparent transition-all resize-none"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none"
             placeholder="Tell us about your project or enquiry..."
           />
           {errors.message && (

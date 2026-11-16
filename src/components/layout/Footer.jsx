@@ -12,19 +12,21 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <motion.div
-              className="text-2xl font-heading font-bold text-gradient mb-4"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              BalaNex
+              <img 
+                src="/images/logo.png" 
+                alt="BalaNex Technologies Logo" 
+                className="h-16 w-auto mb-4"
+              />
             </motion.div>
-            <p className="text-sm font-medium text-gray-400 mb-4">Technologies</p>
-            <p className="text-gray-400 mb-6">
-              Build • Automate • Grow
+            <p className="text-gray-400 mb-6 font-medium">
+              INNOVATE | AUTOMATE | ELEVATE
             </p>
             <p className="text-gray-400 text-sm leading-relaxed">
-              A digital solutions and technology company helping businesses strengthen their online presence, improve operations and explore new opportunities through digital innovation.
+              Building Next-Gen Solutions for businesses through AI, automation, digital growth, and technology innovation.
             </p>
           </div>
 

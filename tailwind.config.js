@@ -7,11 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        midnight: '#101026',
-        deepPurple: '#5426D5',
-        electricBlue: '#168BFF',
-        teal: '#15C9B5',
+        // Updated color theme based on logo
+        primary: '#2C2C54',
+        secondary: '#6A0DAD',
+        accent: '#8B5CF6',
+        lightAccent: '#A78BFA',
         lightBg: '#F7F8FC',
+        midnight: '#1a1a2e',
       },
       fontFamily: {
         heading: ['Space Grotesk', 'sans-serif'],

@@ -86,12 +86,12 @@ const SAPFICO = () => {
                   className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                 >
                   <div className="flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-gradient-to-br from-electricBlue to-deepPurple text-white flex items-center justify-center text-sm font-bold mr-4">
+                    <span className="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-deepPurple text-white flex items-center justify-center text-sm font-bold mr-4">
                       {index + 1}
                     </span>
                     <span className="font-semibold text-midnight">{module}</span>
                   </div>
-                  {openModule === index ? <ChevronUp className="text-electricBlue" /> : <ChevronDown className="text-electricBlue" />}
+                  {openModule === index ? <ChevronUp className="text-accent" /> : <ChevronDown className="text-accent" />}
                 </button>
                 <AnimatePresence>
                   {openModule === index && (
@@ -151,7 +151,7 @@ const SAPFICO = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Users className="text-electricBlue mr-3 flex-shrink-0 mt-1" size={24} />
+                <Users className="text-accent mr-3 flex-shrink-0 mt-1" size={24} />
                 <span className="text-gray-700">{item}</span>
               </motion.div>
             ))}
@@ -173,7 +173,7 @@ const SAPFICO = () => {
                   <MessageSquare className="mr-2" size={20} />
                   Enquire via WhatsApp
                 </a>
-                <Link to="/academy" className="inline-flex items-center text-electricBlue font-medium hover:gap-2 transition-all">
+                <Link to="/academy" className="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
                   <ArrowRight size={16} className="mr-1" />
                   Back to Academy
                 </Link>

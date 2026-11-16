@@ -82,27 +82,27 @@ const CaseStudies = () => {
                   )}
                 </div>
                 <h3 className="text-2xl font-heading font-bold text-midnight mb-2">{study.title}</h3>
-                <p className="text-electricBlue font-medium mb-6">{study.industry}</p>
+                <p className="text-accent font-medium mb-6">{study.industry}</p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div className="space-y-6">
                     <div>
                       <h4 className="font-semibold text-midnight mb-2 flex items-center">
-                        <Target className="mr-2 text-electricBlue" size={20} />
+                        <Target className="mr-2 text-accent" size={20} />
                         Challenge
                       </h4>
                       <p className="text-gray-600">{study.challenge}</p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-midnight mb-2 flex items-center">
-                        <TrendingUp className="mr-2 text-electricBlue" size={20} />
+                        <TrendingUp className="mr-2 text-accent" size={20} />
                         Objective
                       </h4>
                       <p className="text-gray-600">{study.objective}</p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-midnight mb-2 flex items-center">
-                        <CheckCircle className="mr-2 text-electricBlue" size={20} />
+                        <CheckCircle className="mr-2 text-accent" size={20} />
                         Strategy
                       </h4>
                       <p className="text-gray-600">{study.strategy}</p>
@@ -155,7 +155,7 @@ const CaseStudies = () => {
             transition={{ delay: 0.3 }}
           >
             <Link to="/contact">
-              <button className="bg-gradient-to-r from-deepPurple via-electricBlue to-teal text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-electricBlue/30 hover:scale-105 transition-all">
+              <button className="bg-gradient-to-r from-deepPurple via-accent to-teal text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-accent/30 hover:scale-105 transition-all">
                 Get in Touch
               </button>
             </Link>

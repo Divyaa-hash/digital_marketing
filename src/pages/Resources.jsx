@@ -114,7 +114,7 @@ const Resources = () => {
                 placeholder="Search articles..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-electricBlue focus:border-transparent transition-all"
+                className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
               />
             </div>
           </div>
@@ -126,7 +126,7 @@ const Resources = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full font-medium transition-all ${
                   selectedCategory === category
-                    ? 'bg-gradient-to-r from-deepPurple via-electricBlue to-teal text-white'
+                    ? 'bg-gradient-to-r from-deepPurple via-accent to-teal text-white'
                     : 'bg-lightBg text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -151,16 +151,16 @@ const Resources = () => {
                   <span>•</span>
                   <span>{article.readTime}</span>
                 </div>
-                <span className="inline-block px-3 py-1 bg-electricBlue/10 text-electricBlue text-xs font-medium rounded-full mb-3">
+                <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full mb-3">
                   {article.category}
                 </span>
-                <h3 className="text-xl font-heading font-bold text-midnight mb-3 group-hover:text-electricBlue transition-colors">
+                <h3 className="text-xl font-heading font-bold text-midnight mb-3 group-hover:text-accent transition-colors">
                   {article.title}
                 </h3>
                 <p className="text-gray-600 text-sm mb-4 line-clamp-3">{article.excerpt}</p>
                 <Link
                   to={`/resources/${article.id}`}
-                  className="inline-flex items-center text-electricBlue font-medium group-hover:gap-2 transition-all"
+                  className="inline-flex items-center text-accent font-medium group-hover:gap-2 transition-all"
                 >
                   Read More <ArrowRight size={16} className="ml-1" />
                 </Link>

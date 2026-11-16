@@ -27,7 +27,7 @@ const FAQAccordion = ({ category, questions }) => {
                 animate={{ rotate: openId === faq.id ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <ChevronDown className="text-electricBlue flex-shrink-0" />
+                <ChevronDown className="text-accent flex-shrink-0" />
               </motion.div>
             </button>
             <AnimatePresence>

@@ -5,10 +5,10 @@ const Button = forwardRef(({ children, variant = 'primary', size = 'md', classNa
   const baseStyles = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2';
 
   const variants = {
-    primary: 'bg-gradient-to-r from-deepPurple via-electricBlue to-teal text-white hover:shadow-xl hover:shadow-electricBlue/40 hover:scale-105 focus:ring-2 focus:ring-electricBlue focus:ring-offset-2',
+    primary: 'bg-gradient-to-r from-secondary via-accent to-teal text-white hover:shadow-xl hover:shadow-accent/40 hover:scale-105 focus:ring-2 focus:ring-accent focus:ring-offset-2',
     secondary: 'bg-white text-midnight border-2 border-midnight hover:bg-midnight hover:text-white hover:scale-105 focus:ring-2 focus:ring-midnight focus:ring-offset-2',
     outline: 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-midnight hover:scale-105 focus:ring-2 focus:ring-white focus:ring-offset-2',
-    text: 'text-electricBlue hover:text-deepPurple hover:scale-105 focus:ring-2 focus:ring-electricBlue focus:ring-offset-2'
+    text: 'text-accent hover:text-secondary hover:scale-105 focus:ring-2 focus:ring-accent focus:ring-offset-2'
   };
 
   const sizes = {

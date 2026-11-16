@@ -16,11 +16,11 @@ const Home = () => {
     <div className="min-h-screen">
       <Header />
 
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-midnight via-deepPurple to-electricBlue pt-20">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-midnight via-secondary to-accent pt-20">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-teal rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-electricBlue rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-deepPurple rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-lightAccent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary rounded-full blur-3xl"></div>
         </div>
 
         <div className="container-custom relative">
@@ -31,12 +31,12 @@ const Home = () => {
             transition={{ duration: 0.8 }}
           >
             <motion.p
-              className="text-teal font-semibold text-sm uppercase tracking-wider mb-4"
+              className="text-lightAccent font-semibold text-sm uppercase tracking-wider mb-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              Digital Marketing | AI & Automation | Web & Technology | Business Growth
+              AI SOLUTIONS | AUTOMATION | DIGITAL GROWTH | TECHNOLOGY SOLUTIONS
             </motion.p>
             <motion.h1
               className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight"
@@ -91,8 +91,8 @@ const Home = () => {
                     transition={{ delay: 0.8 + index * 0.1 }}
                     whileHover={{ scale: 1.05 }}
                   >
-                    <stat.icon className="text-teal mx-auto mb-2 group-hover:scale-110 transition-transform" size={32} />
-                    <div className="text-3xl font-bold text-white mb-1 group-hover:text-teal transition-colors">{stat.value}</div>
+                    <stat.icon className="text-lightAccent mx-auto mb-2 group-hover:scale-110 transition-transform" size={32} />
+                    <div className="text-3xl font-bold text-white mb-1 group-hover:text-lightAccent transition-colors">{stat.value}</div>
                     <div className="text-gray-300 text-sm group-hover:text-white transition-colors">{stat.label}</div>
                   </motion.div>
                 ))}
@@ -123,9 +123,9 @@ const Home = () => {
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
                   <ArrowUpRight className="text-white" size={32} />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-midnight mb-3 group-hover:text-electricBlue transition-colors">{service.title}</h3>
+                <h3 className="text-xl font-heading font-bold text-midnight mb-3 group-hover:text-accent transition-colors">{service.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">{service.description}</p>
-                <Link to={service.route} className="text-electricBlue font-medium inline-flex items-center group-hover:gap-2 transition-all">
+                <Link to={service.route} className="text-accent font-medium inline-flex items-center group-hover:gap-2 transition-all">
                   Learn More <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
@@ -158,7 +158,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <item.icon className="text-electricBlue mb-4" size={32} />
+                <item.icon className="text-accent mb-4" size={32} />
                 <h3 className="text-lg font-heading font-bold text-midnight mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
               </motion.div>
@@ -185,7 +185,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-electricBlue to-deepPurple flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                   {index + 1}
                 </div>
                 <h3 className="text-white font-semibold">{step}</h3>
@@ -212,7 +212,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
               >
-                <industry.icon className="text-electricBlue mx-auto mb-3" size={28} />
+                <industry.icon className="text-accent mx-auto mb-3" size={28} />
                 <h3 className="text-sm font-semibold text-midnight">{industry.title}</h3>
               </motion.div>
             ))}
@@ -252,9 +252,9 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 to-transparent"></div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-lg font-heading font-bold text-midnight mb-2 group-hover:text-electricBlue transition-colors">{course.title}</h3>
-                  <p className="text-electricBlue font-medium text-xs mb-3">{course.tagline}</p>
-                  <Link to={course.route} className="text-electricBlue font-medium inline-flex items-center group-hover:gap-2 transition-all text-sm">
+                  <h3 className="text-lg font-heading font-bold text-midnight mb-2 group-hover:text-accent transition-colors">{course.title}</h3>
+                  <p className="text-accent font-medium text-xs mb-3">{course.tagline}</p>
+                  <Link to={course.route} className="text-accent font-medium inline-flex items-center group-hover:gap-2 transition-all text-sm">
                     Explore <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -283,7 +283,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-midnight via-deepPurple to-electricBlue">
+      <section className="py-20 bg-gradient-to-br from-midnight via-secondary to-accent">
         <div className="container-custom text-center">
           <motion.h2
             className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6"

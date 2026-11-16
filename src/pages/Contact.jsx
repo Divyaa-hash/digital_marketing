@@ -32,10 +32,10 @@ const Contact = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                 >
-                  <Mail className="text-electricBlue mr-4 flex-shrink-0" size={24} />
+                  <Mail className="text-accent mr-4 flex-shrink-0" size={24} />
                   <div>
                     <h3 className="font-semibold text-midnight mb-1">Email</h3>
-                    <a href="mailto:balanextechnologies@gmail.com" className="text-gray-600 hover:text-electricBlue transition-colors">
+                    <a href="mailto:balanextechnologies@gmail.com" className="text-gray-600 hover:text-accent transition-colors">
                       balanextechnologies@gmail.com
                     </a>
                   </div>
@@ -48,10 +48,10 @@ const Contact = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
                 >
-                  <Phone className="text-electricBlue mr-4 flex-shrink-0" size={24} />
+                  <Phone className="text-accent mr-4 flex-shrink-0" size={24} />
                   <div>
                     <h3 className="font-semibold text-midnight mb-1">Phone</h3>
-                    <a href="tel:+919876543210" className="text-gray-600 hover:text-electricBlue transition-colors">
+                    <a href="tel:+919876543210" className="text-gray-600 hover:text-accent transition-colors">
                       +91 98765 43210
                     </a>
                   </div>
@@ -64,7 +64,7 @@ const Contact = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  <MapPin className="text-electricBlue mr-4 flex-shrink-0" size={24} />
+                  <MapPin className="text-accent mr-4 flex-shrink-0" size={24} />
                   <div>
                     <h3 className="font-semibold text-midnight mb-1">Location</h3>
                     <p className="text-gray-600">India</p>

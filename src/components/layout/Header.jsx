@@ -51,12 +51,14 @@ const Header = () => {
         <nav className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center group">
             <motion.div
-              className="text-2xl font-heading font-bold bg-gradient-to-r from-deepPurple via-electricBlue to-teal bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
             >
-              BalaNex
+              <img 
+                src="/images/logo.png" 
+                alt="BalaNex Technologies Logo" 
+                className="h-12 w-auto"
+              />
             </motion.div>
-            <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-electricBlue transition-colors">Technologies</span>
           </Link>
 
           <div className="hidden lg:flex items-center space-x-8">
@@ -67,7 +69,7 @@ const Header = () => {
                     <button
                       onClick={(e) => handleDropdownToggle(e, item.name)}
                       className={`flex items-center font-medium transition-colors ${
-                        location.pathname.startsWith('/services') ? 'text-electricBlue' : 'text-gray-700 hover:text-electricBlue'
+                        location.pathname.startsWith('/services') ? 'text-accent' : 'text-gray-700 hover:text-accent'
                       }`}
                       aria-expanded={openDropdown === item.name}
                     >
@@ -89,8 +91,8 @@ const Header = () => {
                               to={subItem.route}
                               className={`block px-4 py-3 transition-colors ${
                                 location.pathname === subItem.route
-                                  ? 'text-electricBlue bg-gray-50'
-                                  : 'text-gray-700 hover:bg-gray-50 hover:text-electricBlue'
+                                  ? 'text-accent bg-gray-50'
+                                  : 'text-gray-700 hover:bg-gray-50 hover:text-accent'
                               }`}
                             >
                               {subItem.name}
@@ -105,8 +107,8 @@ const Header = () => {
                     to={item.route}
                     className={`font-medium transition-colors ${
                       location.pathname === item.route
-                        ? 'text-electricBlue'
-                        : 'text-gray-700 hover:text-electricBlue'
+                        ? 'text-accent'
+                        : 'text-gray-700 hover:text-accent'
                     }`}
                   >
                     {item.name}
@@ -121,7 +123,7 @@ const Header = () => {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-gray-700 hover:text-electricBlue transition-colors"
+            className="lg:hidden p-2 text-gray-700 hover:text-accent transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -144,7 +146,7 @@ const Header = () => {
                     <div>
                       <button
                         onClick={(e) => handleDropdownToggle(e, item.name)}
-                        className="flex items-center justify-between w-full text-left text-gray-700 font-medium py-3 hover:text-electricBlue transition-colors"
+                        className="flex items-center justify-between w-full text-left text-gray-700 font-medium py-3 hover:text-accent transition-colors"
                       >
                         {item.name}
                         <ChevronDown
@@ -167,8 +169,8 @@ const Header = () => {
                                 to={subItem.route}
                                 className={`block py-3 px-4 rounded-lg transition-colors ${
                                   location.pathname === subItem.route
-                                    ? 'text-electricBlue bg-blue-50'
-                                    : 'text-gray-600 hover:text-electricBlue hover:bg-gray-50'
+                                    ? 'text-accent bg-blue-50'
+                                    : 'text-gray-600 hover:text-accent hover:bg-gray-50'
                                 }`}
                               >
                                 {subItem.name}
@@ -183,8 +185,8 @@ const Header = () => {
                       to={item.route}
                       className={`block py-3 font-medium transition-colors ${
                         location.pathname === item.route
-                          ? 'text-electricBlue'
-                          : 'text-gray-700 hover:text-electricBlue'
+                          ? 'text-accent'
+                          : 'text-gray-700 hover:text-accent'
                       }`}
                     >
                       {item.name}

@@ -57,7 +57,7 @@ const Services = () => {
             Let's discuss how our services can help you achieve your business goals. Contact us for a free consultation.
           </p>
           <Link to="/contact">
-            <button className="bg-gradient-to-r from-deepPurple via-electricBlue to-teal text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-electricBlue/30 hover:scale-105 transition-all">
+            <button className="bg-gradient-to-r from-deepPurple via-accent to-teal text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-accent/30 hover:scale-105 transition-all">
               Get in Touch
             </button>
           </Link>

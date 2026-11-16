@@ -11,7 +11,7 @@ const SectionHeading = ({ title, subtitle, description, className = '' }) => {
     >
       {subtitle && (
         <motion.p
-          className="text-electricBlue font-semibold text-sm uppercase tracking-wider mb-2"
+          className="text-accent font-semibold text-sm uppercase tracking-wider mb-2"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

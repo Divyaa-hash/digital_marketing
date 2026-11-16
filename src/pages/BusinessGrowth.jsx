@@ -58,7 +58,7 @@ const BusinessGrowth = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <service.icon className="text-electricBlue mb-4" size={32} />
+                <service.icon className="text-accent mb-4" size={32} />
                 <h3 className="text-lg font-heading font-bold text-midnight mb-2">{service.title}</h3>
                 <p className="text-gray-600 text-sm">{service.desc}</p>
               </motion.div>
@@ -107,7 +107,7 @@ const BusinessGrowth = () => {
                 viewport={{ once: true }}
                 transition={{ delay: item.step * 0.1 }}
               >
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-electricBlue to-deepPurple flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-deepPurple flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                   {item.step}
                 </div>
                 <h3 className="text-lg font-heading font-bold text-midnight mb-2">{item.title}</h3>
@@ -128,7 +128,7 @@ const BusinessGrowth = () => {
                 description="Contact us to discuss how our business growth services can help you achieve your goals."
               />
               <div className="mt-8">
-                <Link to="/contact" className="inline-flex items-center text-electricBlue font-medium hover:gap-2 transition-all">
+                <Link to="/contact" className="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
                   Contact Us <ArrowRight size={16} className="ml-1" />
                 </Link>
               </div>
