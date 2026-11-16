@@ -36,7 +36,7 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              AI SOLUTIONS | AUTOMATION | DIGITAL GROWTH | TECHNOLOGY SOLUTIONS
+              BM Academy · Best Training Institute
             </motion.p>
             <motion.h1
               className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight"
@@ -44,8 +44,7 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              Turn Your Ideas Into{' '}
-              <span className="text-gradient">Digital Momentum</span>
+              Best Digital Marketing Course in Chennai
             </motion.h1>
             <motion.p
               className="text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed"
@@ -53,7 +52,7 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              We help businesses attract the right audience, build powerful digital experiences and simplify operations through digital marketing, intelligent automation and modern technology.
+              Learn Digital Marketing that opens doors to jobs, freelancing & business growth. Master SEO, Google Ads, Meta Ads, Content Marketing, and AI Tools through live projects. Job-ready in just 60 days.
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -61,11 +60,11 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              <Link to="/contact">
-                <Button size="lg">Let's Discuss Your Project</Button>
+              <Link to="/academy">
+                <Button size="lg">Explore Curriculum</Button>
               </Link>
-              <Link to="/services">
-                <Button variant="outline" size="lg">Discover What We Do</Button>
+              <Link to="/contact">
+                <Button variant="outline" size="lg">Claim Offer</Button>
               </Link>
             </motion.div>
           </motion.div>
@@ -77,11 +76,20 @@ const Home = () => {
             transition={{ delay: 0.7, duration: 0.8 }}
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 max-w-4xl mx-auto hover:bg-white/15 transition-all duration-300">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-heading font-bold text-white mb-2">Academy Offer</h3>
+                <div className="flex items-center justify-center gap-3">
+                  <span className="text-3xl font-bold text-lightAccent">₹30,000</span>
+                  <span className="text-xl text-gray-400 line-through">₹50,000</span>
+                  <span className="bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">40% OFF</span>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { icon: Target, label: 'Targeted Reach', value: '500+' },
-                  { icon: Users, label: 'Happy Clients', value: '50+' },
-                  { icon: Zap, label: 'Projects Delivered', value: '100+' }
+                  { icon: BookOpen, label: 'Live Online', value: 'Real Projects' },
+                  { icon: Target, label: '3 Days/Week', value: '2 Hours class' },
+                  { icon: Zap, label: '60 Days', value: 'Program Duration' },
+                  { icon: Users, label: 'Tamil & English', value: 'Languages' }
                 ].map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -92,10 +100,19 @@ const Home = () => {
                     whileHover={{ scale: 1.05 }}
                   >
                     <stat.icon className="text-lightAccent mx-auto mb-2 group-hover:scale-110 transition-transform" size={32} />
-                    <div className="text-3xl font-bold text-white mb-1 group-hover:text-lightAccent transition-colors">{stat.value}</div>
+                    <div className="text-lg font-bold text-white mb-1 group-hover:text-lightAccent transition-colors">{stat.value}</div>
                     <div className="text-gray-300 text-sm group-hover:text-white transition-colors">{stat.label}</div>
                   </motion.div>
                 ))}
+              </div>
+              <div className="mt-6 text-center">
+                <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-300">
+                  <span>✓ Complete AI Digital Marketing curriculum</span>
+                  <span>✓ SEO, Google Ads, Meta Ads, Content & AI Tools</span>
+                  <span>✓ Live projects & 5 industry certificates</span>
+                  <span>✓ Resume, LinkedIn & mock interview prep</span>
+                  <span>✓ Placement & freelance support</span>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -137,18 +154,18 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <SectionHeading
-            subtitle="Why BalaNex"
-            title="Partner with a Team That Gets Results"
-            description="We combine creativity, technology and strategic thinking to deliver measurable outcomes for your business."
+            subtitle="Who It's For"
+            title="Digital Marketing Training That Fits Your Goals"
+            description="Whether you're a student, fresher, working professional, homemaker, business owner, or someone looking for a career change — this course helps you learn practical digital marketing skills and grow with confidence."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: Sparkles, title: 'Innovation First', desc: 'We stay ahead of trends to bring you cutting-edge solutions that give you a competitive edge.' },
-              { icon: Target, title: 'Results Driven', desc: 'Every strategy we implement is focused on delivering measurable, meaningful results for your business.' },
-              { icon: Users, title: 'Collaborative Approach', desc: 'We work closely with you to understand your unique challenges and create tailored solutions.' },
-              { icon: Zap, title: 'Fast Execution', desc: 'Our agile methodology ensures quick turnaround times without compromising on quality.' },
-              { icon: CheckCircle, title: 'Quality Assurance', desc: 'Rigorous testing and quality checks ensure that every deliverable meets the highest standards.' },
-              { icon: BookOpen, title: 'Continuous Learning', desc: 'We constantly update our skills and knowledge to provide you with the best solutions.' }
+              { icon: '💼', title: 'Career Switchers', desc: 'Perfect for professionals looking to move into digital marketing and build a rewarding career with in-demand skills.' },
+              { icon: '🎓', title: 'Freshers', desc: 'Learn digital marketing from the ground up with hands-on projects, practical assignments, and industry-ready training.' },
+              { icon: '📚', title: 'Students', desc: 'Gain valuable digital marketing skills, work on real campaigns, and strengthen your resume before graduation.' },
+              { icon: '💻', title: 'Freelancers', desc: 'Learn how to attract clients, deliver results, and grow a successful freelance digital marketing career.' },
+              { icon: '🏪', title: 'Business Owners', desc: 'Use digital marketing to generate leads, increase brand visibility, and grow your business online.' },
+              { icon: '🏠', title: 'Homemakers', desc: 'Restart your career, explore freelance opportunities, or build a work-from-home income with digital marketing.' }
             ].map((item, index) => (
               <motion.div
                 key={item.title}
@@ -158,7 +175,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <item.icon className="text-accent mb-4" size={32} />
+                <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="text-lg font-heading font-bold text-midnight mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
               </motion.div>
@@ -170,25 +187,29 @@ const Home = () => {
       <section className="py-20 bg-midnight">
         <div className="container-custom">
           <SectionHeading
-            subtitle="How We Work"
-            title="A Proven Process for Success"
-            description="Our systematic approach ensures clarity, efficiency and exceptional results at every stage."
+            subtitle="Why Our Course Stands Out"
+            title="Turn What You Learn into Work-Ready Skills"
+            description="We don't just teach and stop. You'll work on practical assignments, live projects, and real-world marketing activities."
             className="text-white"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-            {['Understand', 'Strategize', 'Build', 'Automate', 'Measure', 'Grow'].map((step, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mt-12">
+            {[
+              { icon: '🔧', title: 'Learn by Doing', desc: 'Work on real campaigns instead of just theory.' },
+              { icon: '🎯', title: 'Expert Mentorship', desc: 'Learn directly from industry professionals.' },
+              { icon: '👥', title: 'Batch Learning', desc: 'Get personal attention and doubt clearing.' },
+              { icon: '♾️', title: 'Lifetime Access', desc: 'Revisit content anytime, forever.' }
+            ].map((item, index) => (
               <motion.div
-                key={step}
-                className="text-center"
+                key={item.title}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/15 transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                  {index + 1}
-                </div>
-                <h3 className="text-white font-semibold">{step}</h3>
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-lg font-heading font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-gray-300 text-sm">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -291,7 +312,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            Ready to Start Your Digital Journey?
+            Ready to Become a Job-Ready Digital Marketer?
           </motion.h2>
           <motion.p
             className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto"
@@ -300,7 +321,7 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            Let's discuss how we can help you achieve your business goals.
+            Join the next batch and master SEO, Google Ads, Meta Ads, AI Tools and more. Seats are limited - enroll today.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -309,7 +330,7 @@ const Home = () => {
             transition={{ delay: 0.3 }}
           >
             <Link to="/contact">
-              <Button size="lg">Let's Talk</Button>
+              <Button size="lg">Enroll Now on WhatsApp</Button>
             </Link>
           </motion.div>
         </div>
