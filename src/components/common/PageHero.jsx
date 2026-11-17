@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const PageHero = ({ title, subtitle, description, className = '' }) => {
+const PageHero = ({ title, subtitle, description, className = '', children }) => {
   return (
     <section className={`relative overflow-hidden bg-gradient-to-br from-primary via-secondary to-accent ${className}`}>
       <div className="absolute inset-0 opacity-10">
@@ -15,6 +15,15 @@ const PageHero = ({ title, subtitle, description, className = '' }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          {children && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.1 }}
+            >
+              {children}
+            </motion.div>
+          )}
           {subtitle && (
             <motion.p
               className="text-lightAccent font-semibold text-sm uppercase tracking-wider mb-4"

@@ -26,6 +26,39 @@ const Academy = () => {
         description="Learn Digital Marketing that opens doors to jobs, freelancing & business growth. Master SEO, Google Ads, Meta Ads, Content Marketing, and AI Tools through live projects. Job-ready in just 60 days."
       />
 
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <img 
+              src="/images/bm-academy-logo.png" 
+              alt="BM Academy Logo" 
+              className="h-32 w-auto mx-auto mb-6"
+            />
+            <div className="flex justify-center gap-8 flex-wrap">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">📚</span>
+                <span className="font-semibold text-midnight">LEARN</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">💡</span>
+                <span className="font-semibold text-midnight">BUILD</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">📈</span>
+                <span className="font-semibold text-midnight">GROW</span>
+              </div>
+            </div>
+            <p className="text-gray-600 mt-4 text-sm uppercase tracking-wider">GUIDE • MOTIVATE • GROW • SUCCESS</p>
+            <p className="text-accent font-semibold mt-2">LEARN TODAY, LEAD TOMORROW</p>
+          </motion.div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
