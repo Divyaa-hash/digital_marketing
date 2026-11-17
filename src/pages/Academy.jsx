@@ -26,41 +26,45 @@ const Academy = () => {
         description="Learn Digital Marketing that opens doors to jobs, freelancing & business growth. Master SEO, Google Ads, Meta Ads, Content Marketing, and AI Tools through live projects. Job-ready in just 60 days."
       />
 
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <motion.div
             className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="flex items-center justify-center gap-6 mb-8">
               <img 
                 src="/images/bm-academy-logo.jpg" 
                 alt="BM Academy Logo" 
-                className="h-24 w-auto"
+                className="h-40 w-auto object-contain"
+                onError={(e) => {
+                  console.error('Logo failed to load');
+                  e.target.style.display = 'none';
+                }}
               />
               <div className="text-left">
-                <h2 className="text-3xl font-heading font-bold text-midnight">BM Academy</h2>
-                <p className="text-gray-600">by BalaNex Technologies</p>
+                <h2 className="text-4xl font-heading font-bold text-midnight">BM Academy</h2>
+                <p className="text-gray-600 text-lg">by BalaNex Technologies</p>
               </div>
             </div>
-            <div className="flex justify-center gap-8 flex-wrap">
-              <div className="flex items-center gap-2">
+            <div className="flex justify-center gap-8 flex-wrap mb-6">
+              <div className="flex items-center gap-2 px-4 py-2 bg-lightBg rounded-lg">
                 <span className="text-2xl">📚</span>
                 <span className="font-semibold text-midnight">LEARN</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 px-4 py-2 bg-lightBg rounded-lg">
                 <span className="text-2xl">💡</span>
                 <span className="font-semibold text-midnight">BUILD</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 px-4 py-2 bg-lightBg rounded-lg">
                 <span className="text-2xl">📈</span>
                 <span className="font-semibold text-midnight">GROW</span>
               </div>
             </div>
-            <p className="text-gray-600 mt-4 text-sm uppercase tracking-wider">GUIDE • MOTIVATE • GROW • SUCCESS</p>
-            <p className="text-accent font-semibold mt-2">LEARN TODAY, LEAD TOMORROW</p>
+            <p className="text-gray-600 mt-4 text-sm uppercase tracking-wider font-medium">GUIDE • MOTIVATE • GROW • SUCCESS</p>
+            <p className="text-accent font-semibold mt-2 text-lg">LEARN TODAY, LEAD TOMORROW</p>
           </motion.div>
         </div>
       </section>
