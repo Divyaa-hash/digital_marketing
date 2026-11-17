@@ -5,6 +5,7 @@ import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import PageHero from '../components/common/PageHero';
 import SectionHeading from '../components/common/SectionHeading';
+import Button from '../components/common/Button';
 import { courses } from '../data/courses';
 
 const Academy = () => {
@@ -271,7 +272,7 @@ const Academy = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-midnight via-deepPurple to-accent">
+      <section className="py-20 bg-gradient-to-br from-midnight via-secondary to-accent">
         <div className="container-custom text-center">
           <motion.h2
             className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6"
