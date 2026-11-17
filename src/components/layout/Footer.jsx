@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Github, Facebook, Linkedin, Instagram, Youtube } from 'lucide-react';
 import { navigation } from '../../data/navigation';
 import { services } from '../../data/services';
 
@@ -90,7 +89,7 @@ const Footer = () => {
           <p className="text-gray-400 text-sm">
             © {currentYear} BalaNex Technologies. All rights reserved.
           </p>
-          <div className="flex items-center space-x-6 mt-4 md:mt-0">
+          <div className="flex space-x-6 mt-4 md:mt-0">
             <Link
               to="/privacy-policy"
               className="text-gray-400 hover:text-white text-sm transition-colors"
@@ -103,40 +102,6 @@ const Footer = () => {
             >
               Terms & Conditions
             </Link>
-            <div className="flex space-x-4 ml-4">
-              <a
-                href="https://github.com/Divyaa-hash/digital_marketing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                href="https://wa.me/919876543210"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Instagram size={20} />
-              </a>
-            </div>
           </div>
         </div>
       </div>

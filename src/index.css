@@ -32,7 +32,7 @@ html {
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-deepPurple via-accent to-teal bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-secondary via-accent to-lightAccent bg-clip-text text-transparent;
   }
 
   .glassmorphism {
