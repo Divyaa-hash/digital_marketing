@@ -219,29 +219,47 @@ const Home = () => {
       <section className="py-20 bg-lightBg">
         <div className="container-custom">
           <SectionHeading
-            subtitle="Industries We Serve"
-            title="Digital Solutions for Every Business"
-            description="We work with diverse industries, understanding their unique challenges and delivering tailored solutions."
+            subtitle="Meet Our Founder"
+            title="Training Shaped by Industry Experience"
           />
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {industries.slice(0, 10).map((industry, index) => (
-              <motion.div
-                key={industry.id}
-                className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-              >
-                <industry.icon className="text-accent mx-auto mb-3" size={28} />
-                <h3 className="text-sm font-semibold text-midnight">{industry.title}</h3>
-              </motion.div>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link to="/industries">
-              <Button variant="secondary">View All Industries</Button>
-            </Link>
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="bg-white rounded-2xl p-8 shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                <div className="w-full md:w-1/3">
+                  <div className="w-32 h-32 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center mx-auto">
+                    <Users className="text-white" size={64} />
+                  </div>
+                </div>
+                <div className="w-full md:w-2/3">
+                  <h3 className="text-2xl font-heading font-bold text-midnight mb-2">Founder · CEO</h3>
+                  <p className="text-gray-600 mb-4">
+                    Bringing over 25 years of industry experience and a proven track record of delivering 300+ successful digital marketing projects. Has helped D2C brands, B2B companies, startups, and enterprises achieve measurable growth through strategic digital marketing solutions including SEO, Google Ads, Meta Ads, Content Marketing, and Performance Marketing.
+                  </p>
+                  <p className="text-gray-600">
+                    Driven by a passion for mentoring the next generation of marketers, established BM Academy to bridge the gap between theory and real-world execution. Students learn the same practical frameworks, strategies, and industry-tested methodologies used in live client projects.
+                  </p>
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-6 mt-8 pt-8 border-t">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-accent mb-1">25+</div>
+                  <div className="text-sm text-gray-600">Years in Digital Marketing</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-accent mb-1">300+</div>
+                  <div className="text-sm text-gray-600">Projects Delivered</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-accent mb-1">200+</div>
+                  <div className="text-sm text-gray-600">Learners Mentored</div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -249,43 +267,49 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <SectionHeading
-            subtitle="BM Academy"
-            title="Learn • Build • Grow"
-            description="Acquire practical skills in digital marketing, SAP, AI and automation with our comprehensive training programs."
+            subtitle="What You'll Learn"
+            title="Step-by-step Training, Basics to Advanced"
+            description="Ten real-world modules that take you from zero to job-ready."
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {courses.slice(0, 4).map((course, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              'Social Media Marketing',
+              'SEO and Keyword Research',
+              'Google Ads',
+              'Meta Ads',
+              'Content Marketing',
+              'Email Marketing',
+              'Performance Marketing',
+              'Brand Marketing',
+              'Graphic Design',
+              'Website Development',
+              'Video Editing',
+              'AI Tools for Digital Marketing',
+              'Analytics and Reporting',
+              'Lead Generation',
+              'Freelancing and Business Growth',
+              'Resume Building and Interview Prep',
+              'Live Projects and Case Studies'
+            ].map((module, index) => (
               <motion.div
-                key={course.id}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer"
+                key={module}
+                className="bg-lightBg rounded-xl p-6 hover:shadow-lg transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
+                transition={{ delay: index * 0.05 }}
               >
-                <div className="relative h-40 overflow-hidden">
-                  <img
-                    src={course.image}
-                    alt={course.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 to-transparent"></div>
-                </div>
-                <div className="p-5">
-                  <h3 className="text-lg font-heading font-bold text-midnight mb-2 group-hover:text-accent transition-colors">{course.title}</h3>
-                  <p className="text-accent font-medium text-xs mb-3">{course.tagline}</p>
-                  <Link to={course.route} className="text-accent font-medium inline-flex items-center group-hover:gap-2 transition-all text-sm">
-                    Explore <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center text-white font-bold text-sm mr-3 flex-shrink-0">
+                    {index + 1}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-midnight mb-1">{module}</h3>
+                    <p className="text-xs text-gray-600">Hands-on • Live Project • Certificate</p>
+                  </div>
                 </div>
               </motion.div>
             ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link to="/academy">
-              <Button>Visit BM Academy</Button>
-            </Link>
           </div>
         </div>
       </section>
@@ -293,12 +317,116 @@ const Home = () => {
       <section className="py-20 bg-lightBg">
         <div className="container-custom">
           <SectionHeading
-            subtitle="Frequently Asked Questions"
-            title="Got Questions? We've Got Answers"
+            subtitle="Tools You'll Master"
+            title="Hands-on with the Tools the Industry Actually Uses"
+            description="Work with the full marketing stack — from paid ad platforms and SEO suites to AI assistants."
           />
-          <div className="max-w-3xl mx-auto">
-            {faqData.map((category) => (
-              <FAQAccordion key={category.category} category={category.category} questions={category.questions} />
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+            {[
+              'Meta Ads', 'Google Ads', 'Google Analytics', 'Google Search Console',
+              'Semrush', 'Microsoft Clarity', 'PageSpeed Insights', 'Screaming Frog',
+              'Claude AI', 'ChatGPT', 'Google My Business', 'Ahrefs'
+            ].map((tool, index) => (
+              <motion.div
+                key={tool}
+                className="bg-white rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+              >
+                <div className="text-3xl mb-2">🔧</div>
+                <h3 className="text-sm font-semibold text-midnight">{tool}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="Results That Speak"
+            title="Stories from Learners Who Got Real Outcomes"
+            description="Real projects, practical frameworks, and mentorship from people building brands."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              { name: 'Priya K.', result: 'Cracked 2 offers', desc: 'My job search felt endless after graduation. Changed that journey completely.' },
+              { name: 'Arun R.', result: 'Placed in 3 weeks', desc: 'Learning in Tamil made everything easier. The AI tools module was a game-changer.' },
+              { name: 'Sowmya M.', result: '4 direct interviews', desc: 'They connected me with 4 companies directly. Interview prep was thorough.' },
+              { name: 'Nithya P.', result: 'Freelancer · 5 clients', desc: 'After a 6-year career break, gave me confidence to restart my career.' },
+              { name: 'Samantha', result: '2 offers in 2 weeks', desc: 'Received 2 job offers within just 2 weeks. Practical training made all the difference.' },
+              { name: 'Jayasri R.', result: 'First DM job', desc: 'No prior experience but practical training helped me learn quickly.' }
+            ].map((testimonial, index) => (
+              <motion.div
+                key={testimonial.name}
+                className="bg-lightBg rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center text-white font-bold mr-3">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-midnight">{testimonial.name}</h3>
+                    <p className="text-sm text-accent">{testimonial.result}</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm">"{testimonial.desc}"</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-lightBg">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="FAQ"
+            title="Everything You Need to Know Before Enrolling"
+          />
+          <div className="max-w-4xl mx-auto space-y-4">
+            {[
+              {
+                q: 'Do I need any prior experience to join this course?',
+                a: 'No. This program is built for complete beginners. The only requirements are basic English and a willingness to learn. No technical background, no prior knowledge, and no coding experience needed.'
+              },
+              {
+                q: 'What will I learn in this course?',
+                a: 'You will master SEO, Google Ads, Meta Ads, Content Marketing, Social Media Marketing, Email Marketing, Performance Marketing, Brand Marketing, Graphic Design, Website Development, Video Editing, AI Tools for Digital Marketing, Analytics and Reporting, Lead Generation, Freelancing and Business Growth, Resume Building and Interview Prep, and Live Projects.'
+              },
+              {
+                q: 'How long is the course?',
+                a: 'The program is 60 days with classes 3 days per week, 2 hours per session. Live online with real projects.'
+              },
+              {
+                q: 'What languages are available?',
+                a: 'Classes are conducted in both Tamil and English.'
+              },
+              {
+                q: 'Do you provide placement support?',
+                a: 'Yes, we provide placement support, resume and LinkedIn preparation, mock interview prep, and connect you with companies for direct interviews.'
+              },
+              {
+                q: 'Can I learn while working?',
+                a: 'Yes, the schedule is designed for working professionals with flexible timing and part-payment options.'
+              }
+            ].map((faq, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <h3 className="text-lg font-heading font-bold text-midnight mb-3">{faq.q}</h3>
+                <p className="text-gray-600 text-sm">{faq.a}</p>
+              </motion.div>
             ))}
           </div>
         </div>
