@@ -52,12 +52,17 @@ const Header = () => {
           <Link to="/" className="flex items-center group">
             <motion.div
               whileHover={{ scale: 1.05 }}
+              className="flex items-center gap-3"
             >
               <img 
                 src="/images/logo.png" 
                 alt="BalaNex Technologies Logo" 
-                className="h-12 w-auto"
+                className="h-14 w-auto"
               />
+              <div className="hidden sm:block">
+                <span className="text-xl font-heading font-bold text-midnight">BalaNex</span>
+                <span className="text-xl font-heading font-bold text-accent ml-1">Technologies</span>
+              </div>
             </motion.div>
           </Link>
 
