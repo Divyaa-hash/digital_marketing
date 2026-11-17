@@ -35,9 +35,11 @@ const Academy = () => {
             viewport={{ once: true }}
           >
             <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="h-24 w-24 bg-gradient-to-br from-accent to-secondary rounded-xl flex items-center justify-center">
-                <span className="text-white text-4xl font-bold">BM</span>
-              </div>
+              <img 
+                src="/images/bm-academy-logo.jpg" 
+                alt="BM Academy Logo" 
+                className="h-24 w-auto"
+              />
               <div className="text-left">
                 <h2 className="text-3xl font-heading font-bold text-midnight">BM Academy</h2>
                 <p className="text-gray-600">by BalaNex Technologies</p>
