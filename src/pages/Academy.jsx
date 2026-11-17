@@ -34,11 +34,17 @@ const Academy = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <img 
-              src="/images/bm-academy-logo.png" 
-              alt="BM Academy Logo" 
-              className="h-32 w-auto mx-auto mb-6"
-            />
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <img 
+                src="/images/bm-academy-logo.png" 
+                alt="BM Academy Logo" 
+                className="h-24 w-auto"
+              />
+              <div className="text-left">
+                <h2 className="text-3xl font-heading font-bold text-midnight">BM Academy</h2>
+                <p className="text-gray-600">by BalaNex Technologies</p>
+              </div>
+            </div>
             <div className="flex justify-center gap-8 flex-wrap">
               <div className="flex items-center gap-2">
                 <span className="text-2xl">📚</span>
