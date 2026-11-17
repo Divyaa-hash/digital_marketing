@@ -11,9 +11,9 @@ const Contact = () => {
     <div className="min-h-screen">
       <Header />
       <PageHero
-        title="Tell Us What You're Building"
+        title="Enroll in the Best Digital Marketing Course"
         subtitle="Contact Us"
-        description="Whether you're planning a new website, exploring digital marketing, improving business processes or looking to develop new skills, we'd like to hear from you."
+        description="Ready to start your digital marketing career? Talk to us on WhatsApp to confirm your seat, ask questions, and complete enrollment for the next batch."
       />
 
       <section className="py-20 bg-white">
@@ -21,80 +21,30 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <SectionHeading
-                subtitle="Get in Touch"
-                title="Contact Information"
-                description="Reach out to us through any of these channels. We'll get back to you as soon as possible."
+                subtitle="Join The Program"
+                title="Start Your Digital Marketing Career"
+                description="Seats are limited. Enroll today and start mastering AI-powered digital marketing with real projects, expert mentorship, and job-focused training."
               />
               <div className="space-y-6 mt-8">
-                <motion.div
-                  className="flex items-start p-6 bg-lightBg rounded-xl"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                >
-                  <Mail className="text-accent mr-4 flex-shrink-0" size={24} />
-                  <div>
-                    <h3 className="font-semibold text-midnight mb-1">Email</h3>
-                    <a href="mailto:balanextechnologies@gmail.com" className="text-gray-600 hover:text-accent transition-colors">
-                      balanextechnologies@gmail.com
-                    </a>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  className="flex items-start p-6 bg-lightBg rounded-xl"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 }}
-                >
-                  <Phone className="text-accent mr-4 flex-shrink-0" size={24} />
-                  <div>
-                    <h3 className="font-semibold text-midnight mb-1">Phone</h3>
-                    <a href="tel:+919876543210" className="text-gray-600 hover:text-accent transition-colors">
-                      +91 98765 43210
-                    </a>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  className="flex items-start p-6 bg-lightBg rounded-xl"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
-                >
-                  <MapPin className="text-accent mr-4 flex-shrink-0" size={24} />
-                  <div>
-                    <h3 className="font-semibold text-midnight mb-1">Location</h3>
-                    <p className="text-gray-600">India</p>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  className="flex items-start p-6 bg-green-50 rounded-xl border border-green-200"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
-                >
-                  <MessageSquare className="text-green-600 mr-4 flex-shrink-0" size={24} />
-                  <div>
-                    <h3 className="font-semibold text-midnight mb-1">WhatsApp</h3>
-                    <a
-                      href="https://wa.me/919876543210"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-green-600 hover:text-green-700 transition-colors"
-                    >
-                      Chat with us on WhatsApp
-                    </a>
-                  </div>
-                </motion.div>
+                <div className="bg-lightBg rounded-xl p-6">
+                  <h4 className="font-semibold text-midnight mb-4">Program Details</h4>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li>• Next batch: Starting soon</li>
+                    <li>• 60-day program duration</li>
+                    <li>• 3 days/week, 2 hours class</li>
+                    <li>• Live online with real projects</li>
+                    <li>• Tamil & English languages</li>
+                    <li>• 3 part easy payments available</li>
+                  </ul>
+                </div>
+                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-green-600 font-medium hover:gap-2 transition-all">
+                  <MessageSquare className="mr-2" size={20} />
+                  Enroll Now on WhatsApp
+                </a>
               </div>
             </div>
 
-            <EnquiryForm title="Send Us a Message" />
+            <EnquiryForm title="Course Enquiry" />
           </div>
         </div>
       </section>
