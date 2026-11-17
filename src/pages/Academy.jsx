@@ -24,7 +24,19 @@ const Academy = () => {
         title="Best Digital Marketing Course in Chennai"
         subtitle="BM Academy · Best Training Institute"
         description="Learn Digital Marketing that opens doors to jobs, freelancing & business growth. Master SEO, Google Ads, Meta Ads, Content Marketing, and AI Tools through live projects. Job-ready in just 60 days."
-      />
+      >
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <img 
+            src="/images/bm-academy-logo.jpg" 
+            alt="BM Academy Logo" 
+            className="h-32 w-auto object-contain"
+          />
+          <div className="text-left">
+            <h2 className="text-2xl font-heading font-bold text-white">BM Academy</h2>
+            <p className="text-gray-300">by BalaNex Technologies</p>
+          </div>
+        </div>
+      </PageHero>
 
       <section className="py-20 bg-white">
         <div className="container-custom">
