@@ -1,6 +1,6 @@
 export const courses = [
   {
-    id: 'digital-marketing-masterclass',
+    id: 'digital-marketing',
     title: 'Best Digital Marketing Course in Chennai',
     tagline: 'Job-Ready in 60 Days',
     description: 'Learn Digital Marketing that opens doors to jobs, freelancing & business growth. Master SEO, Google Ads, Meta Ads, Content Marketing, and AI Tools through live projects. Job-ready in just 60 days.',
