@@ -57,11 +57,11 @@ const Header = () => {
               <img
                 src="/images/balanex-logo.png"
                 alt="BalaNex Technologies Logo"
-                className="h-12 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
               <div className="hidden md:block">
-                <span className="text-lg font-heading font-bold bg-gradient-to-r from-[#1e3a8a] to-[#3b82f6] bg-clip-text text-transparent">BalaNex</span>
-                <span className="text-lg font-heading font-bold bg-gradient-to-r from-[#8b5cf6] to-[#a855f7] bg-clip-text text-transparent ml-1">Technologies</span>
+                <span className="text-xl font-heading font-bold bg-gradient-to-r from-[#1e3a8a] to-[#3b82f6] bg-clip-text text-transparent">BalaNex</span>
+                <span className="text-xl font-heading font-bold bg-gradient-to-r from-[#8b5cf6] to-[#a855f7] bg-clip-text text-transparent ml-1">Technologies</span>
               </div>
             </motion.div>
           </Link>
