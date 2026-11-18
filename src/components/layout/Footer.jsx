@@ -16,10 +16,10 @@ const Footer = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              <img 
-                src="/images/logo.png" 
-                alt="BalaNex Technologies Logo" 
-                className="h-16 w-auto mb-4"
+              <img
+                src="/images/balanex-logo.png"
+                alt="BalaNex Technologies Logo"
+                className="h-20 w-auto object-contain mb-4"
               />
             </motion.div>
             <p className="text-gray-400 mb-6 font-medium">
