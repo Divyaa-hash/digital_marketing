@@ -54,9 +54,11 @@ const Header = () => {
               whileHover={{ scale: 1.05 }}
               className="flex items-center gap-3"
             >
-              <div className="h-14 w-14 bg-gradient-to-br from-accent to-secondary rounded-xl flex items-center justify-center">
-                <span className="text-white text-2xl font-bold">BN</span>
-              </div>
+              <img
+                src="/images/balanex-logo.png"
+                alt="BalaNex Technologies Logo"
+                className="h-14 w-auto object-contain"
+              />
               <div className="hidden sm:block">
                 <span className="text-xl font-heading font-bold text-midnight">BalaNex</span>
                 <span className="text-xl font-heading font-bold text-accent ml-1">Technologies</span>
