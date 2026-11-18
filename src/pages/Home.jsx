@@ -16,38 +16,42 @@ const Home = () => {
     <div className="min-h-screen">
       <Header />
 
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-midnight via-secondary to-accent pt-20">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-lightAccent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary rounded-full blur-3xl"></div>
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-white via-gray-50 to-gray-100 pt-20">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 right-20 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-72 h-72 bg-accent rounded-full blur-3xl"></div>
         </div>
 
         <div className="container-custom relative">
-          <motion.div
-            className="max-w-4xl mx-auto text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <motion.p
-              className="text-lightAccent font-semibold text-sm uppercase tracking-wider mb-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              BM Academy · Best Training Institute
-            </motion.p>
-            <motion.h1
-              className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              Best Digital Marketing Course in Chennai
-            </motion.h1>
+              <img
+                src="/images/balanex-logo.png"
+                alt="BalaNex Technologies Logo"
+                className="w-auto h-32 md:h-40 lg:h-48 object-contain mb-8"
+              />
+              <motion.p
+                className="text-accent font-semibold text-sm uppercase tracking-wider mb-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                BM Academy · Best Training Institute
+              </motion.p>
+              <motion.h1
+                className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-midnight mb-6 leading-tight"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+              >
+                Best Digital Marketing Course in Chennai
+              </motion.h1>
             <motion.p
-              className="text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed"
+              className="text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -55,7 +59,7 @@ const Home = () => {
               Learn Digital Marketing that opens doors to jobs, freelancing & business growth. Master SEO, Google Ads, Meta Ads, Content Marketing, and AI Tools through live projects. Job-ready in just 60 days.
             </motion.p>
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
@@ -70,21 +74,21 @@ const Home = () => {
           </motion.div>
 
           <motion.div
-            className="mt-16 relative"
+            className="mt-12 relative"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
           >
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 max-w-4xl mx-auto hover:bg-white/15 transition-all duration-300">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 max-w-md mx-auto hover:shadow-2xl transition-all duration-300">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-heading font-bold text-white mb-2">Academy Offer</h3>
+                <h3 className="text-2xl font-heading font-bold text-midnight mb-2">Academy Offer</h3>
                 <div className="flex items-center justify-center gap-3">
-                  <span className="text-3xl font-bold text-lightAccent">₹30,000</span>
+                  <span className="text-3xl font-bold text-accent">₹30,000</span>
                   <span className="text-xl text-gray-400 line-through">₹50,000</span>
                   <span className="bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">40% OFF</span>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 gap-4">
                 {[
                   { icon: BookOpen, label: 'Live Online', value: 'Real Projects' },
                   { icon: Target, label: '3 Days/Week', value: '2 Hours class' },
@@ -99,14 +103,14 @@ const Home = () => {
                     transition={{ delay: 0.8 + index * 0.1 }}
                     whileHover={{ scale: 1.05 }}
                   >
-                    <stat.icon className="text-lightAccent mx-auto mb-2 group-hover:scale-110 transition-transform" size={32} />
-                    <div className="text-lg font-bold text-white mb-1 group-hover:text-lightAccent transition-colors">{stat.value}</div>
-                    <div className="text-gray-300 text-sm group-hover:text-white transition-colors">{stat.label}</div>
+                    <stat.icon className="text-accent mx-auto mb-2 group-hover:scale-110 transition-transform" size={28} />
+                    <div className="text-base font-bold text-midnight mb-1 group-hover:text-accent transition-colors">{stat.value}</div>
+                    <div className="text-gray-600 text-xs group-hover:text-midnight transition-colors">{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
               <div className="mt-6 text-center">
-                <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-300">
+                <div className="flex flex-wrap justify-center gap-2 text-xs text-gray-600">
                   <span>✓ Complete AI Digital Marketing curriculum</span>
                   <span>✓ SEO, Google Ads, Meta Ads, Content & AI Tools</span>
                   <span>✓ Live projects & 5 industry certificates</span>
@@ -116,6 +120,7 @@ const Home = () => {
               </div>
             </div>
           </motion.div>
+          </div>
         </div>
       </section>
 
