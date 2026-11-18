@@ -57,7 +57,7 @@ const Header = () => {
               <img
                 src="/images/balanex-logo.png"
                 alt="BalaNex Technologies Logo"
-                className="h-14 w-auto object-contain"
+                className="h-10 w-32 object-contain"
               />
               <div className="hidden lg:block">
                 <span className="text-lg font-heading font-bold bg-gradient-to-r from-[#1e3a8a] to-[#3b82f6] bg-clip-text text-transparent">BalaNex</span>
