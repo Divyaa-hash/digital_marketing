@@ -49,24 +49,24 @@ const Header = () => {
     >
       <div className="container-custom">
         <nav className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center group">
+          <Link to="/" className="flex items-center group flex-shrink-0">
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="flex items-center gap-4"
+              className="flex items-center gap-3"
             >
               <img
                 src="/images/balanex-logo.png"
                 alt="BalaNex Technologies Logo"
-                className="h-16 w-auto object-contain"
+                className="h-12 w-auto object-contain"
               />
-              <div className="hidden sm:block">
-                <span className="text-2xl font-heading font-bold bg-gradient-to-r from-[#1e3a8a] to-[#3b82f6] bg-clip-text text-transparent">BalaNex</span>
-                <span className="text-2xl font-heading font-bold bg-gradient-to-r from-[#8b5cf6] to-[#a855f7] bg-clip-text text-transparent ml-1">Technologies</span>
+              <div className="hidden md:block">
+                <span className="text-lg font-heading font-bold bg-gradient-to-r from-[#1e3a8a] to-[#3b82f6] bg-clip-text text-transparent">BalaNex</span>
+                <span className="text-lg font-heading font-bold bg-gradient-to-r from-[#8b5cf6] to-[#a855f7] bg-clip-text text-transparent ml-1">Technologies</span>
               </div>
             </motion.div>
           </Link>
 
-          <div className="hidden lg:flex items-center space-x-10 ml-8">
+          <div className="hidden lg:flex items-center gap-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
