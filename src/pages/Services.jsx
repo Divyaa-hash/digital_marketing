@@ -27,7 +27,7 @@ const Services = () => {
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
-                className="bg-gradient-to-br from-midnight to-deepPurple rounded-2xl p-8 text-white hover:shadow-xl transition-all duration-300 group"
+                className="bg-gradient-to-br from-midnight to-secondary rounded-2xl p-8 text-white hover:shadow-xl transition-all duration-300 group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -38,7 +38,7 @@ const Services = () => {
                 </div>
                 <h3 className="text-2xl font-heading font-bold mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                <Link to={service.route} className="text-teal font-medium inline-flex items-center group-hover:gap-2 transition-all">
+                <Link to={service.route} className="text-accent font-medium inline-flex items-center group-hover:gap-2 transition-all">
                   Learn More <ArrowRight size={16} className="ml-1" />
                 </Link>
               </motion.div>
@@ -57,7 +57,7 @@ const Services = () => {
             Let's discuss how our services can help you achieve your business goals. Contact us for a free consultation.
           </p>
           <Link to="/contact">
-            <button className="bg-gradient-to-r from-deepPurple via-accent to-teal text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-accent/30 hover:scale-105 transition-all">
+            <button className="bg-gradient-to-r from-secondary via-accent to-lightAccent text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-accent/30 hover:scale-105 transition-all">
               Get in Touch
             </button>
           </Link>

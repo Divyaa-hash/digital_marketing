@@ -86,7 +86,7 @@ const SAPFICO = () => {
                   className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                 >
                   <div className="flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-deepPurple text-white flex items-center justify-center text-sm font-bold mr-4">
+                    <span className="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-secondary text-white flex items-center justify-center text-sm font-bold mr-4">
                       {index + 1}
                     </span>
                     <span className="font-semibold text-midnight">{module}</span>
@@ -127,7 +127,7 @@ const SAPFICO = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <BookOpen className="text-teal mr-3 flex-shrink-0 mt-1" size={20} />
+                <BookOpen className="text-accent mr-3 flex-shrink-0 mt-1" size={20} />
                 <span className="text-gray-700">{outcome}</span>
               </motion.div>
             ))}

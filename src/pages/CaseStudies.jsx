@@ -155,7 +155,7 @@ const CaseStudies = () => {
             transition={{ delay: 0.3 }}
           >
             <Link to="/contact">
-              <button className="bg-gradient-to-r from-deepPurple via-accent to-teal text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-accent/30 hover:scale-105 transition-all">
+              <button className="bg-gradient-to-r from-secondary via-accent to-lightAccent text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-accent/30 hover:scale-105 transition-all">
                 Get in Touch
               </button>
             </Link>

@@ -120,7 +120,7 @@ const DigitalMarketingCourse = () => {
                   className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                 >
                   <div className="flex items-center">
-                    <span className="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-deepPurple text-white flex items-center justify-center text-sm font-bold mr-4">
+                    <span className="w-8 h-8 rounded-full bg-gradient-to-br from-accent to-secondary text-white flex items-center justify-center text-sm font-bold mr-4">
                       {index + 1}
                     </span>
                     <span className="font-semibold text-midnight">{module}</span>

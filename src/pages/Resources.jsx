@@ -126,7 +126,7 @@ const Resources = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full font-medium transition-all ${
                   selectedCategory === category
-                    ? 'bg-gradient-to-r from-deepPurple via-accent to-teal text-white'
+                    ? 'bg-gradient-to-r from-secondary via-accent to-lightAccent text-white'
                     : 'bg-lightBg text-gray-700 hover:bg-gray-200'
                 }`}
               >
