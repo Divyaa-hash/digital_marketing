@@ -24,6 +24,22 @@ export const services = [
     color: 'from-secondary to-lightAccent'
   },
   {
+    id: 'google-maps',
+    title: 'Google Maps',
+    description: 'Google My Business Optimization, Local SEO, Map Listings, Location-Based Marketing, Customer Reviews Management and Local Business Visibility.',
+    icon: 'MapPin',
+    route: '/services/google-maps',
+    color: 'from-accent to-lightAccent'
+  },
+  {
+    id: 'business-ads',
+    title: 'Business Ads',
+    description: 'Google Ads, Facebook Ads, Instagram Ads, LinkedIn Ads, Performance Marketing, Lead Generation and ROI-Driven Advertising Campaigns.',
+    icon: 'Megaphone',
+    route: '/services/business-ads',
+    color: 'from-primary to-accent'
+  },
+  {
     id: 'business-growth',
     title: 'Business Growth',
     description: 'Digital Branding, Marketing Strategy, Conversion Optimization, Analytics & Reporting, Customer Acquisition Strategy and Marketing Consulting.',

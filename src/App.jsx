@@ -6,6 +6,8 @@ import Services from './pages/Services';
 import DigitalMarketing from './pages/DigitalMarketing';
 import AIAutomation from './pages/AIAutomation';
 import WebTechnology from './pages/WebTechnology';
+import GoogleMaps from './pages/GoogleMaps';
+import BusinessAds from './pages/BusinessAds';
 import BusinessGrowth from './pages/BusinessGrowth';
 import Industries from './pages/Industries';
 import CaseStudies from './pages/CaseStudies';
@@ -29,6 +31,8 @@ function App() {
           <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
           <Route path="/services/ai-automation" element={<AIAutomation />} />
           <Route path="/services/web-technology" element={<WebTechnology />} />
+          <Route path="/services/google-maps" element={<GoogleMaps />} />
+          <Route path="/services/business-ads" element={<BusinessAds />} />
           <Route path="/services/business-growth" element={<BusinessGrowth />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/case-studies" element={<CaseStudies />} />
