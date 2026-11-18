@@ -3,12 +3,14 @@ import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
-import DigitalMarketing from './pages/DigitalMarketing';
-import AIAutomation from './pages/AIAutomation';
-import WebTechnology from './pages/WebTechnology';
-import GoogleMaps from './pages/GoogleMaps';
-import BusinessAds from './pages/BusinessAds';
-import BusinessGrowth from './pages/BusinessGrowth';
+import SEO from './pages/SEO';
+import SocialMediaMarketing from './pages/SocialMediaMarketing';
+import PerformanceMarketing from './pages/PerformanceMarketing';
+import Branding from './pages/Branding';
+import GraphicDesign from './pages/GraphicDesign';
+import WebsiteDevelopment from './pages/WebsiteDevelopment';
+import VideoEditing from './pages/VideoEditing';
+import CreativeAdShoots from './pages/CreativeAdShoots';
 import Industries from './pages/Industries';
 import CaseStudies from './pages/CaseStudies';
 import Academy from './pages/Academy';
@@ -28,12 +30,14 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
-          <Route path="/services/ai-automation" element={<AIAutomation />} />
-          <Route path="/services/web-technology" element={<WebTechnology />} />
-          <Route path="/services/google-maps" element={<GoogleMaps />} />
-          <Route path="/services/business-ads" element={<BusinessAds />} />
-          <Route path="/services/business-growth" element={<BusinessGrowth />} />
+          <Route path="/services/seo" element={<SEO />} />
+          <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
+          <Route path="/services/performance-marketing" element={<PerformanceMarketing />} />
+          <Route path="/services/branding" element={<Branding />} />
+          <Route path="/services/graphic-design" element={<GraphicDesign />} />
+          <Route path="/services/website-development" element={<WebsiteDevelopment />} />
+          <Route path="/services/video-editing" element={<VideoEditing />} />
+          <Route path="/services/creative-ad-shoots" element={<CreativeAdShoots />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/academy" element={<Academy />} />

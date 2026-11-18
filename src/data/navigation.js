@@ -5,12 +5,14 @@ export const navigation = [
     name: 'Services',
     route: '/services',
     dropdown: [
-      { name: 'Digital Marketing', route: '/services/digital-marketing' },
-      { name: 'AI & Automation', route: '/services/ai-automation' },
-      { name: 'Web & Technology', route: '/services/web-technology' },
-      { name: 'Google Maps', route: '/services/google-maps' },
-      { name: 'Business Ads', route: '/services/business-ads' },
-      { name: 'Business Growth', route: '/services/business-growth' }
+      { name: 'SEO', route: '/services/seo' },
+      { name: 'Social Media Marketing', route: '/services/social-media-marketing' },
+      { name: 'Performance Marketing', route: '/services/performance-marketing' },
+      { name: 'Branding', route: '/services/branding' },
+      { name: 'Graphic Design', route: '/services/graphic-design' },
+      { name: 'Website Development', route: '/services/website-development' },
+      { name: 'Video Editing', route: '/services/video-editing' },
+      { name: 'Creative Ad Shoots', route: '/services/creative-ad-shoots' }
     ]
   },
   { name: 'Industries', route: '/industries' },
