@@ -7,7 +7,7 @@ import Footer from '../components/layout/Footer';
 import PageHero from '../components/common/PageHero';
 import SectionHeading from '../components/common/SectionHeading';
 
-const Resources = () => {
+const Blog = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -100,7 +100,7 @@ const Resources = () => {
       <Header />
       <PageHero
         title="Ideas and Insights for the Digital World"
-        subtitle="Resources & Blog"
+        subtitle="Blog"
         description="Stay updated with the latest trends, tips, and insights in digital marketing, technology, and business growth."
       />
 
@@ -181,4 +181,4 @@ const Resources = () => {
   );
 };
 
-export default Resources;
+export default Blog;

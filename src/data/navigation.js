@@ -18,6 +18,6 @@ export const navigation = [
   { name: 'Industries', route: '/industries' },
   { name: 'Case Studies', route: '/case-studies' },
   { name: 'BM Academy', route: '/academy' },
-  { name: 'Resources', route: '/resources' },
+  { name: 'Blog', route: '/resources' },
   { name: 'Contact', route: '/contact' }
 ];
