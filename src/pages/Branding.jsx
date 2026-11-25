@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Sparkles, Gem, CheckCircle, ArrowRight, Clock, TrendingUp } from 'lucide-react';
+import { Sparkles, Gem, CheckCircle, ArrowRight, Clock, TrendingUp, Palette, FileText, Target, Layers } from 'lucide-react';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import PageHero from '../components/common/PageHero';
@@ -11,51 +11,89 @@ import Button from '../components/common/Button';
 
 const Branding = () => {
   const services = [
-    { title: 'Logo Design', desc: 'We create unique and meaningful logo designs that represent your business name, industry and personality. Simple, professional and easy to recognise.' },
-    { title: 'Brand Identity Design', desc: 'We develop a consistent visual identity using suitable colours, typography, graphic elements and design styles for social media, websites and printed materials.' },
-    { title: 'Brand Strategy', desc: 'We help identify your target audience, brand positioning, communication style and key values to give your branding a clear direction.' },
-    { title: 'Business Profile Design', desc: 'We create well-structured company profiles that present your services, strengths and business information clearly.' },
-    { title: 'Marketing Materials Design', desc: 'From business cards and brochures to flyers and promotional designs, we help maintain a consistent brand appearance.' },
-    { title: 'Brand Guidelines', desc: 'Brand guidelines help your team use your logo, colours, fonts and visual elements correctly for consistent appearance.' }
-  ];
-
-  const benefits = [
-    'Create a strong first impression',
-    'Make your business different from competitors',
-    'Build recognition among potential customers',
-    'Communicate your business values clearly',
-    'Maintain a consistent look across marketing platforms',
-    'Develop a professional identity for long-term growth'
+    { title: 'Brand Strategy and Positioning', desc: 'Brand strategy defines how your business should be presented to its target audience. We identify your unique value, brand personality and the message you want customers to remember.' },
+    { title: 'Logo Design and Brand Identity', desc: 'Your logo is often one of the first visual elements customers associate with your business. We create memorable, relevant and easy-to-recognise identities suitable for websites, social media, business cards, packaging and advertisements.' },
+    { title: 'Brand Colours and Typography', desc: 'Colours and fonts influence how customers experience your brand. We help select a suitable brand colour palette and typography system that reflects your identity.' },
+    { title: 'Brand Guidelines and Visual Identity System', desc: 'Brand guidelines explain how your visual identity should be used across different platforms. They help your team, designers and marketing partners maintain a consistent brand appearance.' },
+    { title: 'Business Stationery and Corporate Branding', desc: 'We design business cards, letterheads, envelopes, company profiles and other corporate branding materials that follow your visual identity.' },
+    { title: 'Packaging and Product Branding', desc: 'Packaging is an important part of the customer experience. We focus on visual presentation, product information, brand consistency and customer expectations.' },
+    { title: 'Social Media and Digital Branding', desc: 'We create social media templates, promotional graphics, digital advertisements and other creative assets that follow your brand colours, typography and visual style.' },
+    { title: 'Website and Marketing Material Branding', desc: 'We help maintain visual consistency across website designs, brochures, presentations, banners and other marketing materials.' },
+    { title: 'Brand Refresh and Rebranding Services', desc: 'A brand refresh improves selected visual elements while retaining familiar features. Rebranding involves a broader change that may include the logo, colours, messaging and overall identity.' }
   ];
 
   const process = [
-    { step: '1', title: 'Understanding Your Business', desc: 'We learn about your products, services, target audience and business goals.' },
-    { step: '2', title: 'Research and Planning', desc: 'We study your industry and competitors to understand how your brand can stand out.' },
-    { step: '3', title: 'Creative Development', desc: 'We work on logo concepts, colours, typography and visual direction.' },
-    { step: '4', title: 'Review and Refinement', desc: 'We collect your feedback and make the necessary improvements.' },
-    { step: '5', title: 'Final Brand Delivery', desc: 'We provide the approved branding materials for your business use.' }
+    { step: '1', title: 'Understanding Your Business', desc: 'We discuss your products, services, target audience, industry and branding goals.' },
+    { step: '2', title: 'Market and Competitor Research', desc: 'We review your market and identify opportunities to make your brand distinct.' },
+    { step: '3', title: 'Creative Direction', desc: 'We develop suitable design concepts based on your brand personality and requirements.' },
+    { step: '4', title: 'Visual Identity Development', desc: 'We create the logo and supporting visual elements.' },
+    { step: '5', title: 'Review and Refinement', desc: 'We collect feedback and make agreed changes to refine the designs.' },
+    { step: '6', title: 'Final Delivery', desc: 'We provide approved design files and the agreed branding materials.' }
+  ];
+
+  const benefits = [
+    'Build recognition among target customers',
+    'Present a professional and organised image',
+    'Communicate products and services clearly',
+    'Differentiate your business from competitors',
+    'Maintain consistency across marketing channels',
+    'Create a strong foundation for future marketing activities'
+  ];
+
+  const industries = [
+    'Startups and small businesses',
+    'Retail and e-commerce',
+    'Restaurants and food businesses',
+    'Healthcare and clinics',
+    'Educational institutions',
+    'Real estate and construction',
+    'Manufacturing and B2B businesses'
+  ];
+
+  const trends = [
+    { title: 'AI-Assisted Branding and Creative Design', desc: 'AI tools can support brainstorming, visual exploration and early concept development. Designers can use them to explore creative directions more efficiently.' },
+    { title: 'Digital-First Brand Identity', desc: 'Logos and visual elements should remain clear and adaptable across smaller screens and different digital formats.' },
+    { title: 'Regional Language and Local Branding', desc: 'Regional language communication can make a brand more familiar to local audiences. Businesses targeting Tamil Nadu can use Tamil messaging and locally relevant design elements.' },
+    { title: 'Short-Form Video and Motion Branding', desc: 'Animated logos, branded Reels and short promotional videos give businesses additional ways to communicate their identity.' },
+    { title: 'Minimal and Flexible Logo Systems', desc: 'Simple and adaptable logos can work across websites, social media profiles, packaging and printed materials.' },
+    { title: 'Consistent and Responsible Branding', desc: 'Using consistent colours, typography and messaging across digital and physical channels creates a familiar brand experience.' }
+  ];
+
+  const locations = [
+    { title: 'Branding Company in Kallakurichi', desc: 'Local businesses need a professional identity that helps customers recognise their products and services. Our branding services in Kallakurichi support shops, startups, educational institutions, restaurants and other businesses.' },
+    { title: 'Branding Agency in Chennai', desc: 'Businesses in Chennai operate across competitive industries and customer segments. We help them develop consistent brand identities and creative materials that support their marketing and business communication goals.' },
+    { title: 'Branding Services in Coimbatore', desc: 'From manufacturing companies to retail businesses and startups, organisations in Coimbatore have different branding requirements. Our solutions help create visual identities that can be used across websites, business communication and digital platforms.' },
+    { title: 'Branding Solutions Across India', desc: 'Businesses serving customers in multiple locations need a consistent identity across their communication channels. We support branding projects for companies across India with solutions based on their target audiences, industry and project requirements.' }
   ];
 
   const faqs = [
     {
-      question: 'Why does my business need branding?',
-      answer: 'Branding helps customers recognise your business, understand what you offer and develop confidence in your company.'
+      question: 'What are branding services, and why does my business need them?',
+      answer: 'Branding services help businesses create a recognisable identity through strategy, logo design, colours, typography and marketing materials. They help communicate what your business represents and maintain consistency across customer interactions.'
     },
     {
-      question: 'Do you provide logo design for new businesses?',
-      answer: 'Yes. We help startups and newly established businesses create professional logo designs and brand identities.'
+      question: 'What is included in a complete brand identity package?',
+      answer: 'A complete package may include logo variations, colour palettes, typography, brand messaging, visual elements and brand guidelines. Business cards, packaging and social media designs can also be included depending on project requirements.'
     },
     {
-      question: 'Can you redesign my existing brand?',
-      answer: 'Yes. We can help refresh your existing logo, colours and visual identity while considering your current brand recognition.'
+      question: 'How much do branding services cost in India?',
+      answer: 'The cost depends on whether you need a logo, basic brand identity or complete branding solution. Design complexity, research requirements and the number of deliverables also influence pricing.'
     },
     {
-      question: 'How long does branding take?',
-      answer: 'The timeline depends on the project requirements, number of design concepts and feedback process. We will discuss the expected timeline before starting.'
+      question: 'How long does it take to create a brand identity?',
+      answer: 'The timeline depends on project scope, design requirements and feedback. A basic logo project generally requires less work than a complete identity with guidelines and multiple marketing assets.'
     },
     {
-      question: 'Do you provide branding for different industries?',
-      answer: 'Yes. We work with different types of businesses and adapt the branding approach to suit their industry and audience.'
+      question: 'What is the difference between logo design and branding?',
+      answer: 'Logo design focuses on creating a visual symbol or wordmark. Branding is broader and includes strategy, messaging, colours, typography and the overall identity customers experience.'
+    },
+    {
+      question: 'Can a small business in Kallakurichi benefit from professional branding?',
+      answer: 'Yes. Professional branding helps small businesses present their products and services clearly, maintain a consistent image and become easier for customers to recognise.'
+    },
+    {
+      question: 'When should a business consider rebranding?',
+      answer: 'A business may consider rebranding when its audience, products, services or market position changes, or when its existing identity no longer represents the business effectively.'
     }
   ];
 
@@ -64,8 +102,8 @@ const Branding = () => {
       <Header />
       <PageHero
         title="Branding Services in Kallakurichi"
-        subtitle="Build a Brand That People Remember!"
-        description="At BalaNex Technologies, we provide creative branding services in Kallakurichi to help businesses build a unique identity and create a professional image."
+        subtitle="Build a Memorable Business Identity"
+        description="Looking for professional Branding Services in Kallakurichi to create a memorable identity for your business? BalaNex Technologies helps businesses build strong brands through logo design, brand strategy, visual identity, packaging design and creative solutions."
       />
 
       <section className="py-20 bg-white">
@@ -78,13 +116,13 @@ const Branding = () => {
               viewport={{ once: true }}
             >
               <p className="text-gray-700 leading-relaxed mb-6">
-                Every successful business starts with an idea, but a strong brand is what helps people recognise and remember that business. Your brand is more than just a logo or a name. It represents your values, personality, quality, and the experience you offer your customers.
+                Your brand is more than a logo or business name. It represents how customers recognise your business, understand your products or services and remember you. A consistent brand identity helps your business communicate professionally across websites, social media, advertisements, packaging and other customer touchpoints.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                At BalaNex Technologies, we develop branding solutions based on your business goals, target audience and industry. Whether you are launching a startup, improving an existing identity or preparing to expand your business, we help create a visual identity that reflects what makes your brand different.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                At BalaNex Technologies, we provide creative branding services in Kallakurichi to help businesses build a unique identity and create a professional image. Whether you are starting a new business, expanding your existing company, or refreshing your current brand, we help you present your business clearly and consistently.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                Our goal is simple: to make your business look professional, communicate its value, and create a lasting impression on your audience.
+                We provide branding support for businesses in Kallakurichi, Chennai and Coimbatore, as well as companies across India through remote consultations and digital design delivery.
               </p>
             </motion.div>
           </div>
@@ -94,23 +132,18 @@ const Branding = () => {
       <section className="py-20 bg-lightBg">
         <div className="container-custom">
           <SectionHeading
-            subtitle="Why Is Branding Important"
-            title="Why Is Branding Important for Your Business?"
+            subtitle="Build Strong Brand"
+            title="Build a Strong Brand Identity That Customers Remember"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-12">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit}
-                className="flex items-start"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <CheckCircle className="text-accent mr-3 flex-shrink-0 mt-1" size={20} />
-                <span className="text-gray-700">{benefit}</span>
-              </motion.div>
-            ))}
+          <div className="max-w-4xl mx-auto mt-8">
+            <motion.p
+              className="text-gray-700 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              A strong brand helps customers understand what your business offers and what makes it different from competitors. It creates a consistent impression whenever someone interacts with your business. Effective branding starts with understanding business requirements. It brings together brand positioning, visual design and communication to create an identity that customers can recognise.
+            </motion.p>
           </div>
         </div>
       </section>
@@ -119,7 +152,7 @@ const Branding = () => {
         <div className="container-custom">
           <SectionHeading
             subtitle="Our Services"
-            title="Our Branding Services"
+            title="Our Branding Services for Businesses"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {services.map((service, index) => (
@@ -143,9 +176,116 @@ const Branding = () => {
       <section className="py-20 bg-lightBg">
         <div className="container-custom">
           <SectionHeading
+            subtitle="Complete Brand Identity"
+            title="What Does a Complete Brand Identity Include?"
+          />
+          <div className="max-w-4xl mx-auto mt-8">
+            <motion.p
+              className="text-gray-700 leading-relaxed mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              A complete brand identity combines different visual and communication elements to create a recognisable business image. The deliverables depend on your requirements and selected branding scope.
+            </motion.p>
+            <motion.div
+              className="bg-white rounded-xl p-6 shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <ul className="space-y-3">
+                {['Brand positioning: A clear direction that communicates your business value and target audience.', 'Logo variations: Primary and secondary logos for different backgrounds and applications.', 'Brand colour palette: Defined colours for consistent visual communication.', 'Typography system: Font styles for headings, body text and supporting materials.', 'Brand messaging: Key messages and communication style that represent your business.', 'Visual elements: Icons, patterns and supporting graphic styles.', 'Brand guidelines: Instructions for applying the identity across different platforms.', 'Marketing assets: Agreed digital and print materials such as business cards, brochures and social media templates.'].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle className="text-accent mr-3 flex-shrink-0 mt-1" size={16} />
+                    <span className="text-gray-700 text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="Branding Trends"
+            title="Branding Trends Shaping Indian Businesses in 2026"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            {trends.map((trend, index) => (
+              <motion.div
+                key={trend.title}
+                className="bg-lightBg rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <TrendingUp className="text-accent mb-4" size={32} />
+                <h3 className="text-xl font-heading font-bold text-midnight mb-3">{trend.title}</h3>
+                <p className="text-gray-600 text-sm">{trend.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-lightBg">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="Industries"
+            title="Branding Solutions for Different Industries"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mt-12">
+            {industries.map((industry, index) => (
+              <motion.div
+                key={industry}
+                className="bg-white rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <CheckCircle className="text-accent mb-3" size={24} />
+                <h3 className="font-semibold text-midnight">{industry}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="Locations"
+            title="Branding Services in Kallakurichi, Chennai and Coimbatore"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            {locations.map((location, index) => (
+              <motion.div
+                key={location.title}
+                className="bg-lightBg rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Layers className="text-accent mb-4" size={32} />
+                <h3 className="text-xl font-heading font-bold text-midnight mb-3">{location.title}</h3>
+                <p className="text-gray-600 text-sm">{location.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-lightBg">
+        <div className="container-custom">
+          <SectionHeading
             subtitle="Our Process"
-            title="Our Branding Process"
-            description="We follow a simple process to understand your business and develop the right brand identity."
+            title="Our Branding Process: From Business Idea to Brand Identity"
           />
           <div className="max-w-4xl mx-auto mt-12 space-y-6">
             {process.map((item, index) => (
@@ -175,18 +315,144 @@ const Branding = () => {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <SectionHeading
-            subtitle="Who Can Benefit"
-            title="Who Can Benefit from Our Branding Services?"
+            subtitle="Consistent Branding"
+            title="Why Is Consistent Branding Important for Business Growth?"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-12">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit}
+                className="flex items-start"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <CheckCircle className="text-accent mr-3 flex-shrink-0 mt-1" size={20} />
+                <span className="text-gray-700">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-lightBg">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="Why Choose Us"
+            title="Why Choose BalaNex Technologies for Branding Services?"
           />
           <div className="max-w-4xl mx-auto mt-8">
             <motion.p
-              className="text-gray-700 leading-relaxed"
+              className="text-gray-700 leading-relaxed mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              Our branding solutions are suitable for startups, retail shops, real estate companies, educational institutions, clinics, restaurants, manufacturers, professional service providers and growing businesses. Whether you operate a small local business or a company serving customers across different locations, a clear brand identity can help you communicate professionally.
+              Choosing a branding partner means finding a team that understands your business and can turn your ideas into useful creative designs. At BalaNex Technologies, we focus on:
             </motion.p>
+            <motion.div
+              className="bg-white rounded-xl p-6 shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <ul className="space-y-3">
+                {['Business-focused design: Creative concepts based on your goals, audience and industry.', 'Customised brand identity: Designs developed around your business requirements rather than a one-size-fits-all approach.', 'Consistent visual communication: Brand elements designed to work across digital and print materials.', 'Multiple creative services: Support for logo design, packaging, stationery and social media graphics.', 'Local market understanding: Branding support for businesses in Kallakurichi, Chennai and Coimbatore.', 'Clear project deliverables: Agreed design assets, file formats and project requirements before final delivery.'].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle className="text-accent mr-3 flex-shrink-0 mt-1" size={16} />
+                    <span className="text-gray-700 text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="Pricing"
+            title="Branding Cost in India: What Should Businesses Expect?"
+          />
+          <div className="max-w-4xl mx-auto mt-8">
+            <motion.p
+              className="text-gray-700 leading-relaxed mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              Branding costs depend on the type of project, design complexity and number of deliverables. The following table provides indicative branding price ranges in India for budget planning.
+            </motion.p>
+            <motion.div
+              className="overflow-x-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <table className="w-full bg-lightBg rounded-xl overflow-hidden shadow-lg">
+                <thead className="bg-midnight text-white">
+                  <tr>
+                    <th className="px-6 py-4 text-left font-heading font-bold">Branding Service</th>
+                    <th className="px-6 py-4 text-left font-heading font-bold">Estimated Cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    ['Basic Logo Design', '₹2,000–₹8,000'],
+                    ['Professional Logo Design', '₹5,000–₹15,000'],
+                    ['Basic Brand Identity Package', '₹8,000–₹20,000'],
+                    ['Complete Brand Identity', '₹15,000–₹40,000'],
+                    ['Brand Guidelines', '₹5,000–₹15,000'],
+                    ['Business Card and Stationery Design', '₹1,000–₹5,000'],
+                    ['Brochure and Company Profile Design', '₹2,000–₹10,000'],
+                    ['Product Packaging Design', '₹3,000–₹15,000+'],
+                    ['Social Media Branding Package', '₹3,000–₹10,000'],
+                    ['Complete Branding and Rebranding', '₹25,000–₹60,000+']
+                  ].map((row, index) => (
+                    <tr key={index} className="border-t border-gray-200">
+                      <td className="px-6 py-4 text-gray-700">{row[0]}</td>
+                      <td className="px-6 py-4 text-gray-700 font-semibold">{row[1]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </motion.div>
+            <motion.p
+              className="text-gray-600 text-sm mt-4 italic"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              These are indicative market estimates, not confirmed BalaNex Technologies package prices. Actual costs may vary based on project scope, number of concepts, design complexity, deliverables and revision requirements.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-lightBg">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="Cost Factors"
+            title="Factors That Affect Branding Costs"
+          />
+          <div className="max-w-4xl mx-auto mt-8">
+            <motion.div
+              className="bg-white rounded-xl p-6 shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <ul className="space-y-3">
+                {['Project scope: A logo project differs from a complete brand identity or rebranding project.', 'Research and strategy: Market research, competitor analysis and brand positioning can add to the project scope.', 'Design complexity: Custom illustrations, logo variations and detailed design systems may require additional work.', 'Number of deliverables: Packaging, stationery, social media templates and marketing materials affect the overall cost.', 'Brand guidelines: Detailed documentation requires additional planning and design work.', 'Revisions and timelines: The agreed revision limits and delivery schedule can influence pricing.'].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle className="text-accent mr-3 flex-shrink-0 mt-1" size={16} />
+                    <span className="text-gray-700 text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -195,8 +461,8 @@ const Branding = () => {
         <div className="container-custom text-center">
           <SectionHeading
             subtitle="Get Started"
-            title="Give Your Business an Identity That Stands Out!"
-            description="Your business deserves to be recognised for what makes it special. Let's create a brand that communicates your values and leaves a positive impression."
+            title="Build a Memorable Brand with BalaNex Technologies"
+            description="Your brand should communicate what makes your business valuable and give customers a reason to remember it. A consistent identity helps your business present itself professionally across websites, social media, packaging and marketing materials."
             className="text-white"
           />
           <motion.div
@@ -231,7 +497,7 @@ const Branding = () => {
               <SectionHeading
                 subtitle="Enquiry"
                 title="Ready to Discuss Your Branding Requirements?"
-                description="Contact BalaNex Technologies today to discuss your branding requirements in Kallakurichi."
+                description="Contact BalaNex Technologies to discuss your branding requirements and create a brand identity that reflects your business."
               />
               <div className="mt-8">
                 <Link to="/contact" className="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
