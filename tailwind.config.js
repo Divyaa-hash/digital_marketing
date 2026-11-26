@@ -16,7 +16,7 @@ export default {
         midnight: '#1a1a2e',
       },
       fontFamily: {
-        heading: ['Space Grotesk', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
       },
     },
