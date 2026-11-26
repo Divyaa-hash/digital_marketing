@@ -1,5 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { motion, AnimatePresence } from 'framer-motion';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -22,32 +23,50 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
 import NotFound from './pages/NotFound';
 
+const PageWrapper = ({ children }) => {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={location.pathname}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+      >
+        {children}
+      </motion.div>
+    </AnimatePresence>
+  );
+};
+
 function App() {
   return (
     <HelmetProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/seo" element={<SEO />} />
-          <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
-          <Route path="/services/performance-marketing" element={<PerformanceMarketing />} />
-          <Route path="/services/branding" element={<Branding />} />
-          <Route path="/services/graphic-design" element={<GraphicDesign />} />
-          <Route path="/services/website-development" element={<WebsiteDevelopment />} />
-          <Route path="/services/video-editing" element={<VideoEditing />} />
-          <Route path="/services/creative-ad-shoots" element={<CreativeAdShoots />} />
-          <Route path="/industries" element={<Industries />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/academy" element={<Academy />} />
-          <Route path="/academy/:id" element={<CourseDetail />} />
-          <Route path="/resources" element={<Blog />} />
-          <Route path="/resources/:id" element={<BlogDetail />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-and-conditions" element={<TermsConditions />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
+          <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
+          <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
+          <Route path="/services/seo" element={<PageWrapper><SEO /></PageWrapper>} />
+          <Route path="/services/social-media-marketing" element={<PageWrapper><SocialMediaMarketing /></PageWrapper>} />
+          <Route path="/services/performance-marketing" element={<PageWrapper><PerformanceMarketing /></PageWrapper>} />
+          <Route path="/services/branding" element={<PageWrapper><Branding /></PageWrapper>} />
+          <Route path="/services/graphic-design" element={<PageWrapper><GraphicDesign /></PageWrapper>} />
+          <Route path="/services/website-development" element={<PageWrapper><WebsiteDevelopment /></PageWrapper>} />
+          <Route path="/services/video-editing" element={<PageWrapper><VideoEditing /></PageWrapper>} />
+          <Route path="/services/creative-ad-shoots" element={<PageWrapper><CreativeAdShoots /></PageWrapper>} />
+          <Route path="/industries" element={<PageWrapper><Industries /></PageWrapper>} />
+          <Route path="/case-studies" element={<PageWrapper><CaseStudies /></PageWrapper>} />
+          <Route path="/academy" element={<PageWrapper><Academy /></PageWrapper>} />
+          <Route path="/academy/:id" element={<PageWrapper><CourseDetail /></PageWrapper>} />
+          <Route path="/resources" element={<PageWrapper><Blog /></PageWrapper>} />
+          <Route path="/resources/:id" element={<PageWrapper><BlogDetail /></PageWrapper>} />
+          <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+          <Route path="/privacy-policy" element={<PageWrapper><PrivacyPolicy /></PageWrapper>} />
+          <Route path="/terms-and-conditions" element={<PageWrapper><TermsConditions /></PageWrapper>} />
+          <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
         </Routes>
       </Router>
     </HelmetProvider>
